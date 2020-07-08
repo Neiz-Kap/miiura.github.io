@@ -1,0 +1,42 @@
+.wrap {
+    padding: 100px 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+}
+
+.tools-blocks {
+    margin: 0 auto;
+    width: 1144px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.block {
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.strong {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btn {
+    padding: 22px 75px;
+    font-size: 13px;
+    background-color: white;
+    color: aqua;
+    border: 1px aqua solid;
+}
+
+.btn:hover {
+    background-color: aqua;
+    color: white;
+}

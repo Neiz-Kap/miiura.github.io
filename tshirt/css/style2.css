@@ -1,0 +1,215 @@
+/* section content */
+
+.content {
+    padding: 30px 0;
+}
+
+.content-wrap {
+    margin: 0 auto;
+}
+
+.content-title {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #afafaf;
+}
+
+.content-detality {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 25px;
+    margin: 0 auto;
+}
+
+.detality-img {
+    width: 500px;
+    height: 540px;
+    font-family: Calibri, sans-serif;
+}
+
+.description {
+    width: 500px;
+    line-height: 25px;
+    font-size: 22px;
+}
+
+.description {
+    margin-bottom: 1px;
+    text-indent: 20px;
+    white-space: unset;
+}
+
+span {
+    font-weight: bold;
+}
+
+.size {
+    border-top: 1px solid #afafaf;
+    margin: 10px 0 30px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.size-text, .price p:first-child {
+    word-spacing: 2px;
+    font-size: 24px;
+    text-align: center;
+    margin: auto;
+}
+
+.size-text p {
+    margin-bottom: 10px;
+}
+
+.size-btn button {
+    width: 45px;
+    height: 45px;
+    color: black;
+    font-size: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.size-btn button:hover, .size-btn button:focus {
+    color: white;
+    background-color: black;
+    outline: none;
+}
+
+.price p:last-child {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.basket {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.basket button {
+    font-size: 27px;
+    border: 2px solid black;
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    padding: 5px 25px;
+}
+
+.basket button:hover, .basket button:focus {
+    color: #fff;
+    background-color: black;
+    border: 2px solid #fff;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.basket button:focus {
+    outline: none;
+    cursor: wait;
+}
+
+@media(max-width: 768px) {
+    .content {
+        padding: 0;
+    }
+    h2 {
+        color: #fff;
+        background-image: url("../img/background.png");
+    }
+    .content-detality {
+        padding: 30px 90px 45px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .detality-img {
+        width: 450px;
+        height: auto;
+        padding-bottom: 40px;
+    }
+    .description {
+        width: 550px;
+        line-height: 1;
+        font-size: 40px;
+    }
+    .size {
+        margin-top: 25px;
+    }
+    .size p, .price p:first-child {
+        font-size: 33px;
+    }
+}
+
+@media(max-width: 375px) {
+    .content-detality {
+        padding: 30px 10px 45px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .detality-img {
+        width: 290px;
+        height: 290px;
+        margin-bottom: 30px;
+    }
+    .description {
+        width: 550px;
+        line-height: 1;
+        font-size: 20px;
+    }
+    .description p {
+        padding: 0 20px;
+    }
+    .size-text p, .price p:first-child {
+        font-size: 20px;
+    }
+    .price p:last-child {
+        height: 85%;
+        margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .size-btn {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 45px 10px 45px;
+        grid-template-columns: repeat(2, 45px);
+        grid-gap: 10px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+}
