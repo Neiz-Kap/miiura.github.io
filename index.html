@@ -4,16 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
     <title>Miuro.pro</title>
+    <script type="text/javascript" src="flowplay/flowplayer-3.2.2.min.js"></script>
+    <script type="text/javascript">
+        flowplayer("player", "../img/", {
+            clip: {
+                autoPlay: false,
+            }
+        });
+    </script>
+    </div>
 </head>
 
 <body>
     <header>
         <div class="wrapper">
             <div class="header">
-                <h1>Здесь шапка сайта</h1>
+                <div class="new-list">≡</div>
+
+                <nav>
+                    <ul>
+                        <li><a href="">компания</a></li>
+                        <li><a href="">команда</a></li>
+                        <img class="header__img" src="img/Композиция-2_3.gif" alt="">
+                        <li><a href="">специализация</a></li>
+                        <li><a href="">контакты</a></li>
+                    </ul>
+                </nav>
+                <h1 id="title">MIURA PRO</h1>
+                <h2>IT компания</h2>
+                <div id="symbol">
+                    <img src="img/simbol.png" alt="Символ">
+                </div>
+                <h2 class="header__title">наша специализация</h2>
             </div>
         </div>
     </header>
@@ -26,7 +53,7 @@
         </section>
         <section>
             <div class="wrapper">
-                <h1>Здесь первая секция</h1>
+                <h1>Здесь вторая секция</h1>
             </div>
         </section>
     </main>
@@ -38,6 +65,8 @@
             </div>
         </div>
     </footer>
+
+
 </body>
 
 </html>

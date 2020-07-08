@@ -1,5 +1,12 @@
+@font-face {
+    src: url(fonts/[AireExterior].ttf);
+    font-family: "Aire Exterior";
+}
+
 * {
     box-sizing: border-box;
+    font-family: "Aire Exterior";
+    color: #fff;
 }
 
 button {
@@ -12,4 +19,80 @@ button {
     min-width: 320px;
     margin: 0 auto;
     padding: 0 20px;
+    outline: 2px solid #fff;
+}
+
+.new-list {
+    display: none;
+}
+
+
+/* header */
+
+body {
+    background-image: url('../miiura.github.io/img/background.png');
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    margin: 0 auto;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+li a {
+    text-decoration: none;
+    line-height: 120px;
+}
+
+.header__img {
+    width: 110px;
+    height: 114px;
+}
+
+#title {
+    width: 295px;
+    margin: 0 auto;
+    font-size: 121px;
+    text-align: center;
+    font-weight: 200;
+}
+
+header h2 {
+    margin: 0 auto;
+    font-size: 49px;
+    text-align: center;
+    font-weight: 200;
+}
+
+#symbol {
+    margin: 70px auto 0;
+    padding-bottom: 85px;
+    text-align: center;
+}
+
+.header__title {
+    font-size: 48px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    .new-list {
+        height: auto;
+        margin-left: 5px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
 }
