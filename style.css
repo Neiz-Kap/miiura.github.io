@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.wrapper {
+    max-width: 1080px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
