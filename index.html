@@ -20,6 +20,13 @@
                     scrollTop: top
                 }, 1500);
             });
+            $("#team-link-2").on('click', (e) => {
+                e.preventDefault();
+                let top = $("#team").offset().top;
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
             $("#specialty-link").on('click', (e) => {
                 e.preventDefault();
                 let top = $("#specialty").offset().top;
@@ -62,7 +69,7 @@
                 <h1 id="title">MIURA PRO</h1>
                 <h2>IT компания</h2>
                 <div id="symbol">
-                    <a id="team-link" href="#team">
+                    <a id="team-link-2" href="#team">
                         <img src="img/simbol3.png" alt="Символ">
                     </a>
                 </div>
