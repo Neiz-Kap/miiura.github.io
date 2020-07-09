@@ -22,6 +22,13 @@
             });
             $("#team-link-2").on('click', (e) => {
                 e.preventDefault();
+                let top = $("#specialty").offset().top;
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
+            $("#team-link-3").on('click', (e) => {
+                e.preventDefault();
                 let top = $("#team").offset().top;
                 $('body,html').animate({
                     scrollTop: top
@@ -41,12 +48,19 @@
                     scrollTop: top
                 }, 1500);
             });
+            $("#row").on('click', (e) => {
+                e.preventDefault();
+                let top = $("#top").offset().top;
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
         });
     </script>
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <div class="wrapper">
             <div class="header">
                 <div class="new-list">≡</div>
@@ -70,7 +84,7 @@
                 <h2>IT компания</h2>
                 <div id="symbol">
                     <a id="team-link-2" href="#team">
-                        <img src="img/simbol3.png" alt="Символ">
+                        <img src="img/simbol.png" alt="Символ">
                     </a>
                 </div>
             </div>
@@ -86,6 +100,16 @@
                 <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм
                     шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset
                     с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
+                <div id="symbol">
+                    <a id="team-link-3" href="#team">
+                        <img src="img/simbol.png" alt="Символ">
+                    </a>
+                </div>
+                <div class="row-up">
+                    <a id="row" href="#top">
+                        <img src="img/row.png" alt="">
+                    </a>
+                </div>
             </div>
         </section>
         <section id="team">

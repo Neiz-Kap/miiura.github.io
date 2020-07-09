@@ -48,6 +48,15 @@ body {
     display: none;
 }
 
+nav {
+    max-width: 1040px;
+    min-width: 830px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 50%);
+    /* position: fixed;
+    z-index: 999; */
+}
+
 ul {
     display: flex;
     justify-content: space-between;
@@ -69,15 +78,21 @@ ul {
 }
 
 li a {
+    padding-bottom: 5px;
     text-decoration: none;
     text-align: center!important;
     line-height: 120px;
 }
 
+li a:hover {
+    transition: .1s;
+    border-bottom: 3px solid #fff;
+}
+
 .header__img {
     max-width: 100px;
-    display: inline-block;
-    position: absolute;
+    display: block;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -89,7 +104,7 @@ li a {
 
 #title {
     max-width: 295px;
-    margin: 30px auto 0;
+    margin: 130px auto 0;
     font-size: 121px;
     text-align: center;
     font-weight: 200;
@@ -106,6 +121,18 @@ header h2 {
 #symbol {
     margin: 70px auto;
     text-align: center;
+}
+
+.row-up {
+    width: 43px;
+    height: 43px;
+    /* background-image: (''); */
+    /* background-position: -411px -82px; */
+    background-repeat: no-repeat;
+    display: block;
+    position: fixed;
+    right: 85px;
+    bottom: 20px;
 }
 
 
@@ -130,7 +157,7 @@ header h2 {
 
 .header__title2+p {
     max-width: 860px;
-    margin: 0 auto 45px;
+    margin: 45px auto;
     text-indent: 20px;
     font-family: "Myriad Pro";
 }
@@ -229,13 +256,23 @@ footer {
 @media (max-width: 1024px) {
     .nav-block {
         width: 40%;
+        justify-content: space-evenly;
     }
 }
 
 @media (max-width: 920px) {
     .nav__item {
-        font-size: 30px;
-        font-weight: 700;
+        font-size: 27px;
+        font-weight: 650;
+    }
+    ul {
+        /* justify-content: center; */
+    }
+    .nav-block {
+        width: 35%;
+    }
+    .nav-block:first-child {
+        /* justify-content: flex-end; */
     }
 }
 
