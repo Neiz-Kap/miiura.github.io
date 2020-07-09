@@ -10,6 +10,32 @@
     <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
     <title>Miuro.pro</title>
     </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#team-link").on('click', (e) => {
+                e.preventDefault();
+                let top = $("#team").offset().top;
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
+            $("#specialty-link").on('click', (e) => {
+                e.preventDefault();
+                let top = $("#specialty").offset().top;
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
+            $("#contacts-link").on('click', (e) => {
+                e.preventDefault();
+                let top = $("#footer").offset().top;
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -17,46 +43,45 @@
         <div class="wrapper">
             <div class="header">
                 <div class="new-list">≡</div>
-
                 <nav>
                     <ul>
-                        <li><a href="">компания</a></li>
-                        <li><a href="">команда</a></li>
-                        <li><a href=""><img class="header__img" src="img/logo.gif" alt=""></a></li>
-                        <li><a href="">специализация</a></li>
-                        <li><a href="">контакты</a></li>
+                        <div class="nav-block">
+                            <li class="nav__item center"><a href="#">компания</a></li>
+                            <li class="nav__item center"><a id="team-link" href="#team">команда</a></li>
+                        </div>
+                        <li class="nav__item center">
+                            <a href=""><img class="header__img" src="img/logo.gif" alt=""></a>
+                        </li>
+                        <div class="nav-block">
+                            <li class="nav__item center"><a id="specialty-link" href="#specialty">специализация</a></li>
+                            <li class="nav__item center"><a id="contacts-link" href="#footer">контакты</a></li>
+                        </div>
+
                     </ul>
                 </nav>
                 <h1 id="title">MIURA PRO</h1>
                 <h2>IT компания</h2>
                 <div id="symbol">
-                    <a href="">
-                        <img src="img/simbol.png" alt="Символ">
+                    <a id="team-link" href="#team">
+                        <img src="img/simbol3.png" alt="Символ">
                     </a>
                 </div>
-
             </div>
         </div>
     </header>
 
     <main>
-        <section>
+        <section id="specialty">
             <div class="wrapper">
                 <hr>
                 <h2 class="header__title center">наша специализация</h2>
                 <h2 class="header__title2 center">MIURA PRO</h2>
-                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-                    Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала
-                    XVI века. В то время некий безымянный печатник создал большую коллекцию
-                    размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-                    Lorem Ipsum не только успешно пережил без заметных изменений пять веков,
-                    но и перешагнул в электронный дизайн. Его популяризации в новое время
-                    послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и,
-                    в более недавнее время, программы электронной вёрстки типа Aldus PageMaker,
-                    в шаблонах которых используется Lorem Ipsum.</p>
+                <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм
+                    шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset
+                    с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.</p>
             </div>
         </section>
-        <section>
+        <section id="team">
             <div class="wrapper">
                 <hr>
                 <h2 class="team__title center">наша команда</h2>
@@ -98,10 +123,15 @@
         </section>
     </main>
 
-    <footer>
+    <footer id="footer">
         <div class="wrapper">
             <div class="footer">
-                <h1>Здесь подвал сайта</h1>
+                <div class="footer-logo">
+                    <img src="img/transparent-logo.png" alt="Логотип в подвале">
+                </div>
+                <div class="footer-email">
+                    <p>itmiurarpo@gmail.com</p>
+                </div>
             </div>
         </div>
     </footer>

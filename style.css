@@ -22,9 +22,9 @@ button {
 .wrapper {
     max-width: 1080px;
     min-width: 320px;
+    height: inherit;
     margin: 0 auto;
     padding: 0 20px;
-    outline: 1px solid #fff;
 }
 
 .center {
@@ -32,9 +32,10 @@ button {
 }
 
 body {
-    /* background-image: url('../miiura.github.io/img/background.png'); */
     background-image: url('img/bg.png');
+    background-repeat: no;
 }
+
 
 /* header */
 
@@ -52,30 +53,43 @@ ul {
     justify-content: space-between;
 }
 
-li {
-    margin: 0 auto;
-    margin: 0 15px;
-    list-style-type: none;
+.nav-block {
+    max-width: 455px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav__item {
+    max-height: 100px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 30px;
+    display: block;
 }
 
 li a {
     text-decoration: none;
+    text-align: center!important;
     line-height: 120px;
 }
 
 .header__img {
-    max-width: 130px;
-    margin: 0 auto;
-    /* height: 114px; */
-    /* display: block; */
+    max-width: 100px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__img img {
+    height: auto;
+    max-width: 100%;
 }
 
 #title {
     max-width: 295px;
-    margin: 0 auto;
+    margin: 30px auto 0;
     font-size: 121px;
     text-align: center;
     font-weight: 200;
@@ -94,9 +108,11 @@ header h2 {
     text-align: center;
 }
 
+
 /* Краткое описание нашей команды - first section */
 
-.header__title, .team__title {
+.header__title,
+.team__title {
     margin-top: 40px;
     font-size: 48px;
     text-transform: uppercase;
@@ -114,12 +130,17 @@ header h2 {
 
 .header__title2+p {
     max-width: 860px;
-    margin: 0 auto 100px;
+    margin: 0 auto 45px;
     text-indent: 20px;
     font-family: "Myriad Pro";
 }
 
+
 /* Наша команда - second section */
+
+section:nth-child(2) {
+    margin-bottom: 60px;
+}
 
 .team__title {
     margin-bottom: 90px;
@@ -169,6 +190,53 @@ header h2 {
     margin: 0;
     text-align: center;
     font-size: 30px;
+}
+
+
+/* header */
+
+footer {
+    max-height: 101px;
+}
+
+.footer {
+    text-align: center;
+    border-top: 2px solid #181619;
+    display: flex;
+    position: relative;
+}
+
+.footer-logo>img {
+    max-width: 101px;
+    max-height: 101px;
+    opacity: .8;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-email {
+    font-size: 30px;
+    color: #bbbabb;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1024px) {
+    .nav-block {
+        width: 40%;
+    }
+}
+
+@media (max-width: 920px) {
+    .nav__item {
+        font-size: 30px;
+        font-weight: 700;
+    }
 }
 
 @media (max-width: 768px) {
