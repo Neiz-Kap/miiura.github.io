@@ -1,294 +1,143 @@
-    @font-face {
-        src: url(fonts/[AireExterior].ttf);
-        font-family: "Aire Exterior";
-    }
-    
-    * {
-        box-sizing: border-box;
-        font-family: "Aire Exterior";
-        color: #fff;
-        overflow: hidden;
-    }
-    
-    html {
-        height: 100%;
-    }
-    
-    body {
-        background-image: url('img/bg.png');
-        overflow-x: hidden;
-    }
-    
-    p {
-        font-family: "Aire Exterior";
-    }
-    
-    button {
-        border: none;
-        outline: none;
-    }
-    
-    .wrapper {
-        max-width: 1080px;
-        min-width: 320px;
-        height: inherit;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-    
-    .center {
-        text-align: center;
-    }
-    /* header */
-    
-    .header {
-        padding-top: 40px;
-        min-height: 100vh;
-    }
-    
-    .new-list {
-        display: none;
-    }
-    
-    nav {
-        max-width: 1040px;
-        min-width: 830px;
-        width: 100%;
-    }
-    
-    ul {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .nav-block {
-        max-width: 455px;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    
-    .nav__item {
-        max-height: 100px;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 30px;
-        display: block;
-    }
-    
-    li a {
-        padding-bottom: 5px;
-        text-decoration: none;
-        text-align: center!important;
-        line-height: 120px;
-    }
-    
-    li a:hover {
-        transition: .1s;
-        border-bottom: 3px solid #fff;
-    }
-    
-    .header__img {
-        max-width: 100px;
-        display: block;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .header__img img {
-        height: auto;
-        max-width: 100%;
-    }
-    
-    #title {
-        max-width: 295px;
-        margin: 130px auto 0;
-        font-size: 121px;
-        text-align: center;
-        font-weight: 200;
-        line-height: 0.75;
-    }
-    
-    header h2 {
-        margin: 0 auto;
-        font-size: 49px;
-        text-align: center;
-        font-weight: 200;
-    }
-    
-    #symbol {
-        margin: 70px auto;
-        text-align: center;
-    }
-    
-    .scroll-up {
-        max-width: 43px;
-        max-height: 43px;
-        display: block;
-        position: fixed;
-        z-index: 999;
-        right: 85px;
-        bottom: 20px;
-        opacity: 0.5;
-    }
-    
-    .scroll-up:hover {
-        opacity: 1;
-        transition: .3s;
-    }
-    /* Краткое описание нашей команды - first section */
-    
-    section {
-        min-height: 100vh;
-    }
-    
-    section:first-child {
-        position: relative;
-    }
-    
-    .header__title,
-    .team__title {
-        margin-top: 40px;
-        font-size: 48px;
-        text-transform: uppercase;
-        font-weight: 100;
-    }
-    
-    .header__title2 {
-        max-width: 230px;
-        padding: 35px 0 20px;
-        margin: 0 auto;
-        font-size: 86px;
-        font-weight: 100;
-        line-height: 0.75;
-    }
-    
-    .header__title2+p {
-        max-width: 860px;
-        margin: 45px auto;
-        text-indent: 20px;
-        font-family: "Myriad Pro";
-    }
-    /* Наша команда - second section */
-    
-    section:nth-child(2) {
-        margin-bottom: 60px;
-    }
-    
-    .team__title {
-        margin-bottom: 90px;
-    }
-    
-    .teams {
-        max-width: 800px;
-        height: 530px;
-        margin: 0 auto;
-    }
-    
-    .scroll {
-        padding-bottom: 70px;
-    }
-    
-    .pers {
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .pers-info {
-        width: 265px;
-        height: 225px;
-    }
-    
-    .avatar {
-        width: 185px;
-        height: 185px;
-        margin: 0 auto;
-        background-color: #fff;
-        border-radius: 50%;
-        position: relative;
-    }
-    
-    .avatar>h3 {
-        padding: 5px 10px;
-        margin-bottom: 0;
-        font-size: 30px;
-        text-align: center;
-        background-color: #000;
-        position: absolute;
-        bottom: 0;
-        left: calc(50% - 50px);
-    }
-    
-    .avatar+p {
-        margin: 0;
-        text-align: center;
-        font-size: 30px;
-    }
-    /* header */
-    
-    footer {
-        max-height: 101px;
-    }
-    
-    .footer {
-        text-align: center;
-        border-top: 2px solid #181619;
-        display: flex;
-        position: relative;
-    }
-    
-    .footer-logo>img {
-        max-width: 101px;
-        max-height: 101px;
-        opacity: .8;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    
-    .footer-email {
-        font-size: 30px;
-        color: #bbbabb;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
-    }
-    
-    @media (max-width: 1024px) {
-        .nav-block {
-            width: 40%;
-            justify-content: space-evenly;
-        }
-    }
-    
-    @media (max-width: 920px) {
-        .nav__item {
-            font-size: 27px;
-            font-weight: 650;
-        }
-        ul {}
-        .nav-block {
-            width: 35%;
-        }
-        .nav-block:first-child {}
-    }
-    
-    @media (max-width: 768px) {
-        nav {
-            display: none;
-        }
-        .new-list {
-            height: auto;
-            margin-left: 5px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-        }
-    }
+@font-face {
+    src: url(fonts/[AireExterior].ttf);
+    font-family: "Aire Exterior";
+}
+
+@font-face {
+    src: url(fonts/BebasNeueCyrillic.ttf);
+    font-family: "Bebas Neue Cyrillic";
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Bebas Neue Cyrillic";
+    color: #fff;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: url('img/bg_planet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.wrapper {
+    max-width: 1080px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* header */
+
+.header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-txt-1 {
+    margin: 40px 0 150px;
+}
+
+.nav {
+    text-decoration: none;
+    color: #cc2666;
+    text-transform: capitalize;
+    font-size: 49px;
+    font-family: "Aire Exterior";
+}
+
+.nav:hover {
+    text-decoration: underline;
+}
+
+.title {
+    font-size: 80px;
+    max-width: 375px;
+}
+
+.discription {
+    font-size: 30px;
+}
+
+.header-txt-2 {
+    max-width: 690px;
+}
+
+.block {
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    max-width: 200px;
+    max-height: 274px;
+}
+
+.little-title {
+    font-size: 150px;
+    line-height: 0.7;
+}
+
+.discription-2 {
+    font-size: 34px;
+    padding-top: 10px;
+}
+
+.prefix {
+    font-size: 80px;
+    color: #cc2666;
+    line-height: 0.72;
+}
+
+.robot-animation {
+    max-width: 370px;
+    position: relative;
+}
+
+.robot-txt {
+    max-width: 280px;
+}
+
+.robot-txt__inner {
+    max-width: inherit;
+    /* 295 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999999;
+    /* background-image: url(../miiura.github.io/img/pink-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.robot-txt__p {
+    padding: 25px 50px;
+    font-size: 25px;
+}
+
+.robot-block {
+    float: right;
+}
+
+.robot {
+    margin-top: 40px;
+    max-width: 185px;
+}
