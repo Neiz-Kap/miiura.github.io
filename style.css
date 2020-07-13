@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    background-image: url('img/bg_planet.jpg');
+    background-image: url('img/bg-planet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     overflow-x: hidden;
@@ -149,12 +149,13 @@ header {
 }
 
 .boosters {
-    max-width: 200px;
-    margin: 0 55px 0 20px;
+    max-width: 185px;
+    margin: 0 35px 0 45px;
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 530px;
+    top: 450px;
+    z-index: -99999999;
 }
 
 .booster {
@@ -162,5 +163,5 @@ header {
 }
 
 .booster:nth-child(2) {
-    margin-left: 30px;
+    /* margin-left: 30px; */
 }
