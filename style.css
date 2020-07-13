@@ -132,9 +132,6 @@ header {
     top: 0;
     left: 0;
     z-index: -999999;
-    /* background-image: url(../miiura.github.io/img/pink-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
 
 .robot-txt__p {
