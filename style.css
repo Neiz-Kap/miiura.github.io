@@ -29,12 +29,12 @@ body {
     width: 16px;
 }
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
     background-color: #1f1d1d;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #28343d;
     background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, 0.014)), color-stop(.5, transparent), to(transparent));
 }
@@ -71,7 +71,6 @@ a {
 .center {
     text-align: center;
 }
-
 
 /* header */
 
@@ -189,8 +188,7 @@ header {
     max-width: 270px;
 }
 
-.robot-txt__inner,
-.pink-bg {
+.robot-txt__inner, .pink-bg {
     max-width: inherit;
     position: absolute;
     top: 0;
@@ -198,10 +196,10 @@ header {
     z-index: -999999;
 }
 
-.robot-txt__p,
-.message {
-    padding: 24px 40px;
+.robot-txt__p, .message {
+    padding: 24px 30px;
     font-size: 22px;
+    text-align: center;
 }
 
 .robot-block {
@@ -259,18 +257,17 @@ header {
     }
 }
 
-
 /* 0.1 0.4 0.7 0.9 0.6 0.3 0 */
 
 .booster {
     width: 75px;
 }
 
-
 /* first section - desccription */
 
 section {
     min-height: 100vh;
+    padding: 5px 0;
 }
 
 .section-1 {
@@ -317,7 +314,6 @@ section {
 .first-par {
     margin-bottom: 21px;
 }
-
 
 /* Robot in first section */
 
@@ -371,7 +367,6 @@ section {
     max-height: 200px;
 }
 
-
 /* Our works and projects in second section */
 
 .big-title {
@@ -417,6 +412,111 @@ footer {
 .email a:hover {
     transition: 0.5s;
     color: #cc2666;
+}
+
+@media (max-width: 1090px) {
+    .rb-animate {
+        min-width: 460px;
+    }
+    .robot-txt {
+        max-width: 240px;
+    }
+    .robot-txt__p, .message {
+        padding: 20px 20px;
+        font-size: 21px;
+    }
+    .message {
+        font-size: 26px;
+    }
+    .message-robot {
+        max-width: 240px;
+    }
+    .boosters {
+        top: 380px;
+    }
+    .pink__title {
+        font-size: 46px;
+    }
+    .desc {
+        max-width: 270px;
+    }
+    .desc:first-child {
+        margin-right: 30px;
+    }
+    .first-par {
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 945px) {
+    .header-page {
+        min-width: 395px;
+    }
+    .title {
+        max-width: 330px;
+        font-size: 70px;
+    }
+    .logo {
+        max-width: 165px;
+        max-height: 170px;
+    }
+    .robot-animation {
+        max-width: 360px;
+    }
+    .robot {
+        margin: 0;
+        max-width: 160px;
+    }
+    .robot-txt {
+        max-width: 210px;
+    }
+    .robot-txt__p, .message {
+        padding: 14px 20px;
+        font-size: 19px;
+    }
+    .rb-animate {
+        min-width: 330px;
+    }
+    .boosters {
+        min-width: 110px;
+        top: 325px;
+    }
+    .pink__title {
+        font-size: 38px;
+    }
+    .box-desc {
+        flex-direction: column;
+    }
+    .desc:first-child {
+        margin-bottom: 30px;
+    }
+    .rb-animate-2 {
+        max-width: 320px;
+        min-height: 460px;
+    }
+    .robot-block-2 {
+        float: none;
+        min-height: 480px;
+    }
+    .robot-2 {
+        max-width: 140px;
+        position: absolute;
+        top: 120px;
+    }
+    .message-robot {
+        max-width: 200px;
+    }
+    .boosters-2 {
+        min-height: 225px;
+        display: flex;
+        top: 300px;
+    }
+    .boosters-2>.booster {
+        max-height: 185px;
+    }
+    .message {
+        font-size: 23px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -474,6 +574,13 @@ footer {
     .prefix {
         font-size: 36px;
     }
+    .pink__title {
+        max-width: max-content;
+        margin: 0 auto;
+        font-size: 55px;
+        text-align: center;
+        display: block;
+    }
     .desccription {
         margin: 0 auto;
     }
@@ -489,12 +596,8 @@ footer {
     .desc-txt:first-child {
         line-height: 1.18;
     }
-    .pink__title {
-        max-width: max-content;
-        margin: 0 auto;
-        font-size: 55px;
-        text-align: center;
-        display: block;
+    .box-desc {
+        flex-direction: row;
     }
     .big-title {
         font-size: 90px;
@@ -506,6 +609,9 @@ footer {
 }
 
 @media (max-width: 640px) {
+    .container {
+        background-size: cover;
+    }
     .header-page {
         min-width: 0;
         height: auto;
@@ -517,7 +623,6 @@ footer {
         position: unset;
         min-width: 0;
         min-height: 0;
-        /* max-width: ; */
         display: block;
     }
     .pink__title {
@@ -578,9 +683,6 @@ footer {
 @media (max-width: 375px) {
     .wrapper {
         max-width: 300px;
-    }
-    .container {
-        background-size: cover;
     }
     .header-page {
         justify-content: flex-start;
