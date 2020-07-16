@@ -216,7 +216,6 @@ a {
 }
 
 .pink-line {
-    /* width: 40%; */
     height: inherit;
     background-color: #cc2666;
 }
@@ -228,15 +227,12 @@ a {
 }
 
 .loaded_hiding .preloader {
-    -webkit-transition: 0.3s opacity;
-    -o-transition: 0.3s opacity;
     transition: 0.3s opacity;
-    opacity: 0;
-}
+  }
 
-.loaded .preloader {
+  .loaded .preloader {
     display: none;
-}
+  }
 
 /* header */
 

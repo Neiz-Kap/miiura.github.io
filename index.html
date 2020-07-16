@@ -34,12 +34,12 @@
                 </div>
             </div>
         </div>
-        <p class="loading">loading 100%</p>
+        <p class="loading">loading <span id="LoaderPercent"></span></p>
         <div class="loader">
             <div class="load-info">
                 <p class="load-data">загрузка данных</p>
                 <div class="load-line">
-                    <div class="pink-line" style="width: 40%;"></div>
+                    <div class="pink-line" id="pink-line"></div>
                 </div>
             </div>
             <div class="load-logo">
@@ -203,21 +203,26 @@
         </footer>
     </div>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/path/to/parallax.js"></script>
     <script>
+
 
         window.onload = function () {
             document.body.classList.add('loaded_hiding');
-            const i = setInterval(function() {
-                let line = document.querySelector('.pink-line');
-                line.style.width += (parseInt(line.style.width) + 1).toString() + '%';
-                console.log(line.style.width)
-            }, 50);
+            let ss = document.getElementById("pink-line"), i = 0;
+            let timer = setInterval(function () {
+                ss.style.width = `${i}%`;
+                document.getElementById("LoaderPercent").innerText = `${i}%`;
+                if (i < 100) i += 5;
+            }, 30)
             window.setTimeout(function () {
                 document.body.classList.add('loaded');
                 document.body.classList.remove('loaded_hiding');
-                clearInterval(i);
-            }, 500);
+                clearInterval(timer);
+            }, 10000);
         }
+
 
 
     </script>
