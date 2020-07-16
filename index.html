@@ -15,6 +15,47 @@
 </head>
 
 <body>
+
+    <!-- Загрузочный экран -->
+    <div class="preloader">
+        <div class="time">
+            <div class="time-text">это может занят несколько секунд</div>
+            <div class="time__inner">
+                <div class="rectangls">
+                    <div class="third-rectangl">
+                        <div class="medium-rect"></div>
+                        <div class="little-rect"></div>
+                        <div class="little-rect"></div>
+                    </div>
+                    <div class="pink-rectangl"></div>
+                </div>
+                <div class="pink-round">
+                    <div class="little-round"></div>
+                </div>
+            </div>
+        </div>
+        <p class="loading">loading 100%</p>
+        <div class="loader">
+            <div class="load-info">
+                <p class="load-data">загрузка данных</p>
+                <div class="laod-line">
+                    <div class="pink-line"></div>
+                </div>
+            </div>
+            <div class="load-logo">
+                <img src="img/logotip-1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="preloader">
+        <div class="loader">
+            <div class="shadow"></div>
+            <div class="box"></div>
+        </div>
+    </div> -->
+
+
     <div class="container">
         <header>
             <div class="wrapper">
@@ -24,7 +65,19 @@
                             <a href="#" class="nav">Home</a>
                             <h1 class="title">Технологии, арт, дизайны</h1>
                             <p class="subtitle">команда разработчиков</p>
-                            <img src="img/pink-line.png" alt="Полоса" class="line">
+                            <div class="time__inner-2 ">
+                                <div class="rectangls other-rect">
+                                    <div class="third-rectangl">
+                                        <div class="medium-rect other-med-rect"></div>
+                                        <div class="little-rect other-lit-rect"></div>
+                                        <div class="little-rect other-lit-rect"></div>
+                                    </div>
+                                    <div class="pink-rectangl"></div>
+                                </div>
+                                <div class="pink-round">
+                                    <div class="little-round"></div>
+                                </div>
+                            </div>
                         </div>
                         <div class="header-page-2">
                             <img src="img/logotip-1.png" alt="Logo" class="logo">
@@ -44,7 +97,8 @@
                                     <img src="img/pink-bg.png" alt="pink">
                                 </div>
                                 <p class="robot-txt__p">
-                                    Приветстую на&nbsp;сайте MIURA. Я&nbsp;робот-гид этого сайта, и&nbsp;помогу вам в&nbsp;ориентировании.
+                                    Приветстую на&nbsp;сайте MIURA. Я&nbsp;робот-гид этого сайта, и&nbsp;помогу вам
+                                    в&nbsp;ориентировании.
                                 </p>
                             </div>
                             <div class="robot-block">
@@ -70,18 +124,22 @@
             <section class="section-2">
                 <div class="wrapper">
                     <div class="section-1">
-                        <div class="desccription">
+                        <div class="description">
                             <h2 class="pink__title">начало нашей компании 2020</h2>
                             <div class="box-desc">
                                 <div class="desc">
                                     <p class="desc__title"><span>1.</span>сервис</p>
-                                    <p class="desc-txt first-par">MIURA&nbsp;&mdash; русская компания по&nbsp;Frontend-разработке и&nbsp;интерактивному дизайну.</p>
-                                    <p class="desc-txt"> Наши основные услуги включают веб-разработку, дизайн, иллюстрацию, концепт-арт и&nbsp;фотографию.</p>
+                                    <p class="desc-txt first-par">MIURA&nbsp;&mdash; русская компания
+                                        по&nbsp;Frontend-разработке и&nbsp;интерактивному дизайну.</p>
+                                    <p class="desc-txt"> Наши основные услуги включают веб-разработку, дизайн,
+                                        иллюстрацию, концепт-арт и&nbsp;фотографию.</p>
                                 </div>
                                 <div class="desc">
                                     <p class="desc__title"><span>2.</span>стратегия</p>
-                                    <p class="desc-txt first-par">Мы, не&nbsp;глядя на&nbsp;конкурентов, выполняем работу заказчика, следуя его вкусам и&nbsp;предпочтениям.</p>
-                                    <p class="desc-txt"> Мы&nbsp;небольшая команда, но&nbsp;талантливая и&nbsp;многопрофильная в&nbsp;своём подходе.</p>
+                                    <p class="desc-txt first-par">Мы, не&nbsp;глядя на&nbsp;конкурентов, выполняем
+                                        работу заказчика, следуя его вкусам и&nbsp;предпочтениям.</p>
+                                    <p class="desc-txt"> Мы&nbsp;небольшая команда, но&nbsp;талантливая
+                                        и&nbsp;многопрофильная в&nbsp;своём подходе.</p>
                                 </div>
                             </div>
                         </div>
@@ -136,12 +194,28 @@
             <div class="wrapper">
                 <div class="footer">
                     <div class="footer-logo"><img src="img/miura-ico.png" alt="ico"></div>
-                    <p class="email"><a href="mailto:support@miura.pro?subject=Вопрос по HTML">support@miura.pro</a></p>
+                    <p class="email"><a href="mailto:support@miura.pro?subject=Помощь">support@miura.pro</a></p>
                     <div class="git-ico"><img src="img/github.png" alt=""></div>
                 </div>
             </div>
         </footer>
-        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        jQuery(window).on("load", function () {
+            e(".preloader").fadeOut();
+        });
+
+        // window.onload = function () {
+        //     document.body.classList.add('loaded_hiding');
+        //     window.setTimeout(function () {
+        //         document.body.classList.add('loaded');
+        //         document.body.classList.remove('loaded_hiding');
+        //     }, 500);
+        // }
+
+
+    </script>
 </body>
 
 </html>
