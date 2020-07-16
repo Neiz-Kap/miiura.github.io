@@ -38,8 +38,8 @@
         <div class="loader">
             <div class="load-info">
                 <p class="load-data">загрузка данных</p>
-                <div class="laod-line">
-                    <div class="pink-line"></div>
+                <div class="load-line">
+                    <div class="pink-line" style="width: 40%;"></div>
                 </div>
             </div>
             <div class="load-logo">
@@ -82,11 +82,13 @@
                         <div class="header-page-2">
                             <img src="img/logotip-1.png" alt="Logo" class="logo">
                             <div class="page-txt">
-                                <div class="white-txt">
-                                    <p class="little-title">miura</p>
-                                    <p class="subtitle-2">компания it технологий</p>
+                                <div class="block-page">
+                                    <div class="white-txt">
+                                        <p class="little-title">miura</p>
+                                        <p class="subtitle-2">компания it технологий</p>
+                                    </div>
+                                    <p class="prefix">pro</p>
                                 </div>
-                                <p class="prefix">pro</p>
                             </div>
                         </div>
                     </div>
@@ -205,9 +207,15 @@
 
         window.onload = function () {
             document.body.classList.add('loaded_hiding');
+            const i = setInterval(function() {
+                let line = document.querySelector('.pink-line');
+                line.style.width += (parseInt(line.style.width) + 1).toString() + '%';
+                console.log(line.style.width)
+            }, 50);
             window.setTimeout(function () {
                 document.body.classList.add('loaded');
                 document.body.classList.remove('loaded_hiding');
+                clearInterval(i);
             }, 500);
         }
 
