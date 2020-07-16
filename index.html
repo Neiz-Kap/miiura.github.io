@@ -200,19 +200,16 @@
             </div>
         </footer>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script>
-        jQuery(window).on("load", function () {
-            e(".preloader").fadeOut();
-        });
 
-        // window.onload = function () {
-        //     document.body.classList.add('loaded_hiding');
-        //     window.setTimeout(function () {
-        //         document.body.classList.add('loaded');
-        //         document.body.classList.remove('loaded_hiding');
-        //     }, 500);
-        // }
+        window.onload = function () {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function () {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
 
 
     </script>
