@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-scroll" id="scroll">
 
 <head>
     <meta charset="UTF-8">
@@ -48,19 +48,14 @@
         </div>
     </div>
 
-    <!-- <div class="preloader">
-        <div class="loader">
-            <div class="shadow"></div>
-            <div class="box"></div>
-        </div>
-    </div> -->
-
-
     <div class="container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
         <header>
             <div class="wrapper">
                 <div class="header">
-                    <div class="header-page">
+                    <div class="header-page animate__fadeInLeftBig">
                         <div class="header-page-1">
                             <a href="#" class="nav">Home</a>
                             <h1 class="title">Технологии, арт, дизайны</h1>
@@ -92,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="robot-animation">
+                    <div class="robot-animation ">
                         <div class="rb-animate">
                             <div class="robot-txt">
                                 <div class="robot-txt__inner">
@@ -107,15 +102,13 @@
                                 <div class="robot">
                                     <img src="img/robot-2.png" alt="Robot-2">
                                 </div>
-                                <div class="booster-block">
-                                    <div class="boosters">
-                                        <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                        <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                    </div>
-                                    <div class="boosters active">
-                                        <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                        <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                    </div>
+                                <div class="boosters">
+                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                </div>
+                                <div class="boosters active">
+                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
                                 </div>
                             </div>
                         </div>
@@ -132,7 +125,7 @@
                                 <div class="desc">
                                     <p class="desc__title"><span>1.</span>сервис</p>
                                     <p class="desc-txt first-par">MIURA&nbsp;&mdash; русская компания
-                                        по&nbsp;Frontend-разработке и&nbsp;интерактивному дизайну.</p>
+                                        по&nbsp;Fullstack-разработке и&nbsp;интерактивному дизайну.</p>
                                     <p class="desc-txt"> Наши основные услуги включают веб-разработку, дизайн,
                                         иллюстрацию, концепт-арт и&nbsp;фотографию.</p>
                                 </div>
@@ -146,27 +139,23 @@
                             </div>
                         </div>
                         <div class="robot-animation rob-animat">
-                            <div class="rb-animate-2">
-                                <div class="message-robot">
-                                    <div class="pink-bg">
-                                        <img src="img/pink-bg-2.png" alt="pink">
-                                    </div>
-                                    <p class="message center">ЗДЕСЬ ВЫ&nbsp;МОЖЕТЕ НАЙТИ ИНФОРМАЦИЮ О&nbsp;НАС.</p>
+                            <div class="message-robot">
+                                <div class="pink-bg">
+                                    <img src="img/pink-bg-2.png" alt="pink">
                                 </div>
-                                <div class="robot-block-2">
-                                    <div class="robot robot-2">
-                                        <img src="img/robot.png" alt="Robot">
-                                    </div>
-                                    <div class="booster-block">
-                                        <div class="boosters-2">
-                                            <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                            <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                        </div>
-                                        <div class="boosters-2 active">
-                                            <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                            <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                        </div>
-                                    </div>
+                                <p class="message center">ЗДЕСЬ ВЫ&nbsp;МОЖЕТЕ НАЙТИ ИНФОРМАЦИЮ О&nbsp;НАС.</p>
+                            </div>
+                            <div class="robot-block-2">
+                                <div class="robot robot-2">
+                                    <img src="img/robot.png" alt="Robot">
+                                </div>
+                                <div class="boosters boosters-2">
+                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                </div>
+                                <div class="boosters boosters-2 active">
+                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
                                 </div>
                             </div>
                         </div>
@@ -219,6 +208,8 @@
             window.setTimeout(function () {
                 document.body.classList.add('loaded');
                 document.body.classList.remove('loaded_hiding');
+                document.getElementById("scroll").classList.remove("no-scroll"); // удалить класс «class-name»
+
                 clearInterval(timer);
             }, 1000);
         }
