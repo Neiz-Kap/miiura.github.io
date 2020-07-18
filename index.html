@@ -186,7 +186,12 @@
                 <div class="footer">
                     <div class="footer-logo"><img src="img/miura-ico.png" alt="ico"></div>
                     <p class="email"><a href="mailto:support@miura.pro?subject=Помощь">support@miura.pro</a></p>
-                    <div class="git-ico"><img src="img/github.png" alt=""></div>
+                    <!-- <div class="box-github"> -->
+                        <div class="git-ico">
+                            <a href="https://github.com/" class="git__inner" target="_blank"><img src="img/github.png"
+                                    alt=""></a>
+                        </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </footer>
@@ -195,8 +200,6 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="/path/to/parallax.js"></script> -->
     <script>
-
-
         window.onload = function () {
             document.body.classList.add('loaded_hiding');
             let ss = document.getElementById("pink-line"), i = 0;
@@ -209,13 +212,10 @@
                 document.body.classList.add('loaded');
                 document.body.classList.remove('loaded_hiding');
                 document.getElementById("scroll").classList.remove("no-scroll"); // удалить класс «class-name»
-
+                document.documentElement.scrollTop = 0;
                 clearInterval(timer);
             }, 1000);
         }
-
-
-
     </script>
 </body>
 
