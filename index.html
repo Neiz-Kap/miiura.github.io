@@ -48,6 +48,7 @@
         </div>
     </div>
 
+
     <div class="container">
         <div id="stars"></div>
         <div id="stars2"></div>
@@ -186,19 +187,16 @@
                 <div class="footer">
                     <div class="footer-logo"><img src="img/miura-ico.png" alt="ico"></div>
                     <p class="email"><a href="mailto:support@miura.pro?subject=Помощь">support@miura.pro</a></p>
-                    <!-- <div class="box-github"> -->
-                        <div class="git-ico">
-                            <a href="https://github.com/" class="git__inner" target="_blank"><img src="img/github.png"
-                                    alt=""></a>
-                        </div>
-                    <!-- </div> -->
+                    <div class="git-ico">
+                        <a href="https://github.com/" class="git__inner" target="_blank"><img src="img/github.png"
+                                alt=""></a>
+                    </div>
                 </div>
             </div>
         </footer>
     </div>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/path/to/parallax.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script>
         window.onload = function () {
             document.body.classList.add('loaded_hiding');
@@ -216,7 +214,42 @@
                 clearInterval(timer);
             }, 1000);
         }
+
+
+
+        // Анимация выезжающих блоков при прокрутке
+        $(window).on("load", function () {
+            $(window).scroll(function () {
+                let windowBottom = $(this).scrollTop() + $(this).innerHeight();
+                $(".description").each(function () {
+                    /* Check the location of each desired element */
+                    // Проверяем расположение каждого элемента 
+                    let objectBottom = $(this).offset().top + $(this).outerHeight();
+
+                    /* If the element is completely within bounds of the window, fade it in */
+                    // Если элемент полностью находится в границах окна, затените его в
+                    if (objectBottom < windowBottom) { //объект появляется на экране (прокручивается вниз)
+                        if ($(this).css("opacity") == 0) { $(this).fadeTo(500, 1); }
+                    } else { //объект выходит из поля зрения (прокрутка вверх)
+                        if ($(this).css("opacity") == 1) { $(this).fadeTo(500, 0); }
+                    }
+                });
+            }).scroll(); //invoke scroll-handler on page-load
+        });
+
+        function parallax(element, distanceX, distanceY, speed) {
+            const item = document.querySelector(element);
+            item.style.transform =`translate(${distanceX * speed}px, -${ distanceY * speed}px)`;
+        }
+
+        window.addEventListener('scroll', function () {
+            parallax('.header-page-1', 0, window.scrollY, 0.3);
+            parallax('.header-page-2', 0, window.scrollY, 0.6);
+            parallax('.robot-animation', window.scrollY, window.scrollY, 0.5);
+        })
     </script>
 </body>
+
+
 
 </html>
