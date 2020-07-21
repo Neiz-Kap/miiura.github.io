@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-scroll" id="scroll">
+<html lang="ru" class="no-scroll" id="scroll">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/fontello.css">
     <link rel="icon" href="img/icon.jpg" type="image/x-icon">
     <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
     <title>Miura.pro</title>
@@ -49,39 +50,57 @@
         </div>
     </div>
 
-
-
-    <div class="container">
-        <!-- Аудио-трекер -->
-        <section class="news_player_header dark">
-            <div class="news_player_header-wrapper">
-                <div class="news_player_header-content">
-                    <div class="block-news">
-                        <div class="block-news_title">
-                            <p>News &amp; updates:</p>
-                        </div>
-                        <div class="marquee">
-                            <div class="scroll-wrap">
-                                <ul class="list">
-                                    <li class="list_item">
-                                        <p class="number">2019-07-09</p>
-                                        <a target="_blank">
-                                            <span>GAINS SYSTEMS At Blockchain Summit Singapore 2019</span>
-                                        </a>
-                                    </li>
-                                </ul>
+    <!-- Аудио-трекер -->
+    <!-- <section class="news_player_header">
+        <div class="news_player_header-wrapper" style="display: none;">
+            <div class="news_player_header-content">
+                <div class="block-player">
+                    <div data-v-461c6fa3="" class="audio_player audio_player-loading">
+                        <div data-v-461c6fa3="" class="audio_player-song">
+                            <div data-v-461c6fa3="" class="audio_player-song-info">
+                                <div data-v-461c6fa3="" class="title-wrapper">
+                                    <div data-v-461c6fa3="" class="title-in-wrapper">Ben-Bhmer-–-Dive-_ft.-Margret_
+                                    </div>
+                                </div>
+                                <div data-v-461c6fa3="" class="timestamps">
+                                    <div data-v-461c6fa3="" id="duration" class="time-now">00:00</div>
+                                    <div data-v-461c6fa3="" class="time-finish">00:00</div>
+                                </div>
+                                <div data-v-461c6fa3="" class="progress_slider_wrapper">
+                                
+                                    <div data-v-461c6fa3="" aria-hidden="true">
+                                        <input id="duration_range" oninput="durationChange(this.value)" value="0"
+                                            style="width: 100%;" type="range" min="0" max="100">
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-v-461c6fa3="" class="actions">
+                                <div data-v-461c6fa3="" class="prev"><i data-v-461c6fa3="" class="icon-to-start"></i>
+                                </div>
+                                <div data-v-461c6fa3="" onclick="musicToggle()" class="play">
+                                    <span data-v-461c6fa3="" class="play_button play_button-loading"><i
+                                            data-v-461c6fa3="" class="icon-spin4 animate-spin"></i></span></div>
+                                <div data-v-461c6fa3="" class="next"><i data-v-461c6fa3="" class="icon-to-end"></i>
+                                </div>
+                                <div data-v-461c6fa3="" class="audio_player-volume_wrapper">
+                                    <div data-v-461c6fa3="" class="icon-box"><i data-v-461c6fa3=""
+                                            class="icon-volume-up"></i>
+                                     
+                                    </div>
+                                    <input oninput="volumeChange(this.value)" style="max-width: 80px;" type="range"
+                                        min="0" value="0.5" step="0.1" max="1">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="block-player">
-                        <audio-player :autoplay="['music']"></audio-player>
-                    </div>
                 </div>
             </div>
-            <div class="box-btn-toggle">
-                <a href="javascript:void(0);"><i class="icon-down"></i></a>
-            </div>
-        </section>
+        </div>
+        <div class="box-btn-toggle"><a href="javascript:void(0);" id="click"><i class="angle-down"></i></a>
+        </div>
+    </section>-->
+    <div class="container">
+
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
@@ -120,7 +139,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="robot-animation">
+                    <div class="robot-animation wow animate__fadeInUpBig">
                         <div class="rb-animate">
                             <div class="robot-txt">
                                 <div class="robot-txt__inner">
@@ -136,22 +155,23 @@
                                     <img src="img/robot-2.png" alt="Robot-2">
                                 </div>
                                 <div class="boosters">
-                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster">
                                 </div>
                                 <div class="boosters active">
-                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </header>
         <main>
-            <section class="section-2">
+            <section class="section-2 wow">
                 <div class="wrapper">
-                    <div class="section-1">
+                    <div class="section-1 wow">
                         <div class="description wow animate__fadeInRightBig">
                             <h2 class="pink__title">начало нашей компании 2020</h2>
                             <div class="box-desc">
@@ -183,12 +203,12 @@
                                     <img src="img/robot.png" alt="Robot">
                                 </div>
                                 <div class="boosters boosters-2">
-                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster">
                                 </div>
                                 <div class="boosters boosters-2 active">
-                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
-                                    <img class="booster" src="img/booster.png" alt="booster" class="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster">
+                                    <img class="booster" src="img/booster.png" alt="booster">
                                 </div>
                             </div>
                         </div>
@@ -197,10 +217,10 @@
             </section>
             <section class="section-2">
                 <div class="wrapper">
-                    <div class="our-work">
-                        <h2 class="big-title">наша работа</h2>
-                        <h2 class="pink__title">наши последние проекты</h2>
-                        <div class="works">
+                    <div class="our-work wow">
+                        <h2 class="big-title wow animate__fadeInLeftBig">наша работа</h2>
+                        <h2 class="pink__title wow animate__fadeInLeftBig">наши последние проекты</h2>
+                        <div class="works wow animate__fadeInRight">
                             <div class="work">
                                 <img src="img/work-1.png" alt="f-work"></div>
                             <div class="work">
@@ -216,10 +236,11 @@
         </main>
         <footer>
             <div class="wrapper">
-                <div class="footer">
-                    <div class="footer-logo"><img src="img/miura-ico.png" alt="ico"></div>
-                    <p class="email"><a href="mailto:support@miura.pro?subject=Помощь">support@miura.pro</a></p>
-                    <div class="git-ico">
+                <div class="footer wow">
+                    <div class="footer-logo wow animate__fadeInLeftBig"><img src="img/miura-ico.png" alt="ico"></div>
+                    <p class="email wow animate__fadeInUpBig"><a href="mailto:support@miura.pro?subject=Помощь"
+                            target="_blank">support@miura.pro</a></p>
+                    <div class="git-ico wow animate__fadeInRightBig">
                         <a href="#" class="git__inner"><img src="img/github.png" alt=""></a>
                         <!-- target="_blank" -->
                     </div>
@@ -227,9 +248,10 @@
             </div>
         </footer>
     </div>
+    <script src="js/wow.min.js"></script>
+    <script src="js/howler.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
