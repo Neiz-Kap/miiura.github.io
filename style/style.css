@@ -6,13 +6,19 @@
 */
 
 @font-face {
-    src: url(../fonts/BebasNeueCyrillic.ttf);
     font-family: "Bebas Neue Cyrillic";
+    src: url('../fonts/BebasNeueCyrillic/BebasNeueCyrillic.eot');
+    src: url('../fonts/BebasNeueCyrillic/BebasNeueCyrillic.woff') format('woff'), url('../fonts/BebasNeueCyrillic/BebasNeueCyrillic.ttf') format('truetype'), url('../fonts/BebasNeueCyrillic/BebasNeueCyrillic.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-    src: url(../fonts/[AireExterior].ttf);
     font-family: "Aire Exterior";
+    src: url('f../fonts/[AireExterior].eot');
+    src: url('../fonts/[AireExterior].woff') format('woff'), url('../fonts/[AireExterior].ttf') format('truetype'), url('../fonts/[AireExterior].svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -248,7 +254,7 @@ body {
     background-image: url('../img/bg-planet.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 button {
@@ -757,6 +763,7 @@ header {
 
 .rb-animate {
     height: 95vh;
+    margin-top: 10px;
     -webkit-animation: rb-animate 4.5s infinite cubic-bezier(0, 0, 1, 1);
     animation: rb-animate 4.5s infinite cubic-bezier(0, 0, 1, 1);
 }
@@ -1624,8 +1631,6 @@ footer {
     animation: header_marquee 10s linear infinite;
 }
 
-
-
 .news_player_header-content .block-news .marquee .list_item a {
     font-size: 12px;
     line-height: 1;
@@ -1674,7 +1679,6 @@ footer {
     left: 45px;
     height: 11px;
     width: calc(100% - 90px);
-    overflow: hidden;
     color: #a4b3c5;
     white-space: nowrap;
 }
@@ -1767,7 +1771,6 @@ footer {
     padding: 5px 0;
 }
 
-
 .vue-slider-rail {
     -webkit-font-variant-ligatures: none;
     font-variant-ligatures: none;
@@ -1796,7 +1799,6 @@ footer {
     transition-property: width, height, left, right, top, bottom;
     background-color: #a4b3c5;
     cursor: pointer;
-    overflow: hidden;
     border-radius: 6px;
 }
 
@@ -1923,7 +1925,6 @@ footer {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     width: 1px;
-    overflow: hidden;
     position: absolute!important;
 }
 
@@ -2056,7 +2057,6 @@ footer {
     height: 28px;
     border-radius: 50%;
     background-color: #1db726;
-    overflow: hidden;
     position: relative;
     margin: 0 10px;
     -webkit-transition: background-color .1s;
@@ -2276,6 +2276,6 @@ footer {
     padding-bottom: 2px;
 }
 
-.angle-down:before{
+.angle-down:before {
     content: "\E80E";
 }
