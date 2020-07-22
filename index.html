@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="style/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" /> -->
+    
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/fontello.css">
     <link rel="icon" href="img/icon.jpg" type="image/x-icon">
@@ -51,9 +52,10 @@
     </div>
 
     <!-- Аудио-трекер -->
-    <section class="news_player_header">
-        <div class="news_player_header-wrapper" style="display: none;">
-            <div class="news_player_header-content">
+
+    <div class="container" style="display: none">
+        <section class="news_player_header">
+            <div class="news_player_header-content" style="display: none;">
                 <div class="block-player">
                     <div data-v-461c6fa3="" class="audio_player audio_player-loading">
                         <div data-v-461c6fa3="" class="audio_player-song">
@@ -95,12 +97,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="box-btn-toggle"><a href="javascript:void(0);" id="click"><i class="angle-down"></i></a>
-        </div>
-    </section>
-    <div class="container">
-
+            <div class="box-btn-toggle"><a href="javascript:void(0);" id="click"><i class="icon-angle-down"></i></a>
+            </div>
+        </section>
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
@@ -172,7 +171,7 @@
             <section class="section-2 wow">
                 <div class="wrapper">
                     <div class="section-1 wow">
-                        <div class="description wow animate__fadeInRightBig">
+                        <div class="description wow animate__fadeInLeftBig">
                             <h2 class="pink__title">начало нашей компании 2020</h2>
                             <div class="box-desc">
                                 <div class="desc">
@@ -191,7 +190,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="robot-animation-2 wow animate__fadeInUpBig">
+                        <div class="robot-animation-2">
+                            <!-- wow animate__fadeInUpBig -->
                             <div class="rob-animat">
                                 <div class="message-robot">
                                     <div class="pink-bg">
@@ -243,7 +243,7 @@
                     <p class="email wow animate__fadeInUpBig"><a href="mailto:support@miura.pro?subject=Помощь"
                             target="_blank">support@miura.pro</a></p>
                     <div class="git-ico wow animate__fadeInRightBig">
-                        <a href="#" class="git__inner"><img src="img/github.png" alt=""></a>
+                        <a href="#" class="git__inner"><img src="img/github-ico.png" alt=""></a>
                         <!-- target="_blank" -->
                     </div>
                 </div>

@@ -2,9 +2,11 @@
 // Появления блоков при прокрутке
 new WOW().init();
 
-
+let container = document.querySelector(".container");
 // Загрузочный экран и загрузка
 window.onload = function () {
+    
+
     document.body.classList.add('loaded_hiding');
     let ss = document.getElementById("pink-line"), i = 0;
     let timer = setInterval(function () {
@@ -19,14 +21,11 @@ window.onload = function () {
         document.documentElement.scrollTop = 0;
         clearInterval(timer);
     }, 1000);
+    container.style.display = "block";
 }
 
-// document.getElementBById("green-btn").onclick = function () {
-//     let media = document.getElementsByClassName('news_player_header-wrapper');
-//     media.style.display = 'block';
 
-// }
-
+// Медиа плеер (radio)
 var radio = function () {
     this.index = 0;
     this.playlist = [];
@@ -77,18 +76,23 @@ radio.prototype = {
     }
 };
 
-// Медиа плеер
 
-let o;
+// Green button
+let o = document.querySelector('.news_player_header-content');
 let t = 0;
+let ArrowIcon = document.querySelector('#click i');
 click.onclick = function () {
-    t++;
-    if (t % 2) {
-        o = document.querySelector('.news_player_header-wrapper');
-        o.style.display = 'block';
+    if (!t) {
+        o.style.display = 'flex';
+        ArrowIcon.classList.remove('icon-angle-down');
+        ArrowIcon.classList.add('icon-angle-up');
+        t++;
     }
     else {
         o.style.display = 'none';
+        ArrowIcon.classList.remove('icon-angle-up');
+        ArrowIcon.classList.add('icon-angle-down');
+        t--;
     }
 }
 
@@ -122,7 +126,7 @@ window.addEventListener('scroll', function () {
     parallax('.header-page-2', 0, window.scrollY, 0.3);
     parallax('.robot-animation', window.scrollY, window.scrollY, 0.5);
     parallax('.rob-animat', 0, window.scrollY, 0.9);
-    // parallax('.description', window.scrollY, 0, 0.3);
+    // parallax('.description', 0, window.scrollY, 0.3);
 })
 
 
