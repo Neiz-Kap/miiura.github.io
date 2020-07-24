@@ -7,8 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="style/reset.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" /> -->
-    
+    <link rel="stylesheet" href="style/animation.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/fontello.css">
     <link rel="icon" href="img/icon.jpg" type="image/x-icon">
@@ -20,33 +19,36 @@
 <body>
 
     <!-- Загрузочный экран -->
+
     <div class="preloader">
-        <div class="time">
-            <div class="time-text">это может занять несколько секунд</div>
-            <div class="time__inner">
-                <div class="rectangls">
-                    <div class="third-rectangl">
-                        <div class="medium-rect"></div>
-                        <div class="little-rect"></div>
-                        <div class="little-rect"></div>
+        <div class="preloader-block">
+            <div class="time">
+                <div class="time-text">Это может занять несколько секунд</div>
+                <div class="time__inner">
+                    <div class="rectangls">
+                        <div class="third-rectangl">
+                            <div class="medium-rect"></div>
+                            <div class="little-rect"></div>
+                            <div class="little-rect"></div>
+                        </div>
+                        <div class="pink-rectangl"></div>
                     </div>
-                    <div class="pink-rectangl"></div>
-                </div>
-                <div class="pink-round">
-                    <div class="little-round"></div>
-                </div>
-            </div>
-        </div>
-        <p class="loading">loading <span id="LoaderPercent"></span></p>
-        <div class="loader">
-            <div class="load-info">
-                <p class="load-data">загрузка данных</p>
-                <div class="load-line">
-                    <div class="pink-line" id="pink-line"></div>
+                    <div class="pink-round">
+                        <div class="little-round"></div>
+                    </div>
                 </div>
             </div>
-            <div class="load-logo">
-                <img src="img/logotip-1.png" alt="">
+            <p class="loading">loading <span id="LoaderPercent"></span></p>
+            <div class="loader">
+                <div class="load-info">
+                    <p class="load-data">загрузка данных</p>
+                    <div class="load-line">
+                        <div class="pink-line" id="pink-line"></div>
+                    </div>
+                </div>
+                <div class="load-logo">
+                    <img src="img/logotip-1.png" alt="">
+                </div>
             </div>
         </div>
     </div>
@@ -106,7 +108,7 @@
         <header>
             <div class="wrapper">
                 <div class="header">
-                    <div class="header-page wow animate__fadeInLeftBig">
+                    <div class="header-page fadeInLeftBig">
                         <div class="header-page-1">
                             <a href="#" class="nav">Home</a>
                             <h1 class="title">Технологии, арт, дизайны</h1>
@@ -138,7 +140,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="robot-animation wow animate__fadeInUpBig">
+                    <div class="robot-animation fadeInUpBig">
                         <div class="rb-animate">
                             <div class="robot-txt">
                                 <div class="robot-txt__inner">
@@ -168,12 +170,12 @@
             </div>
         </header>
         <main>
-            <section class="section-2 wow">
+            <section class="section-2">
                 <div class="wrapper">
-                    <div class="section-1 wow">
-                        <div class="description wow animate__fadeInLeftBig">
-                            <h2 class="pink__title">начало нашей компании 2020</h2>
-                            <div class="box-desc">
+                    <div class="section-1">
+                        <div class="description">
+                            <h2 class="pink__title animation-element fadeInLeft">начало нашей компании 2020</h2>
+                            <div class="box-desc animation-element fadeInLeft">
                                 <div class="desc">
                                     <p class="desc__title"><span>1.</span>сервис</p>
                                     <p class="desc-txt first-par">MIURA&nbsp;&mdash; русская компания
@@ -190,8 +192,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="robot-animation-2">
-                            <!-- wow animate__fadeInUpBig -->
+                        <div class="robot-animation-2 animation-element rob-out">
                             <div class="rob-animat">
                                 <div class="message-robot">
                                     <div class="pink-bg">
@@ -199,7 +200,7 @@
                                     </div>
                                     <p class="message center">ЗДЕСЬ ВЫ&nbsp;МОЖЕТЕ НАЙТИ ИНФОРМАЦИЮ О&nbsp;НАС.</p>
                                 </div>
-                                <div class="robot-block-2">
+                                <div class="robot-block-2 fadeInUpBig">
                                     <div class="robot robot-2">
                                         <img src="img/robot.png" alt="Robot">
                                     </div>
@@ -219,10 +220,10 @@
             </section>
             <section class="section-2">
                 <div class="wrapper">
-                    <div class="our-work wow">
-                        <h2 class="big-title wow animate__fadeInLeftBig">наша работа</h2>
-                        <h2 class="pink__title wow animate__fadeInLeftBig">наши последние проекты</h2>
-                        <div class="works wow animate__fadeInRight">
+                    <div class="our-work">
+                        <h2 class="big-title animation-element fadeInLeftBig">наша работа</h2>
+                        <h2 class="pink__title animation-element fadeInLeftBig">наши последние проекты</h2>
+                        <div class="works animation-element  backInLeft">
                             <div class="work">
                                 <img src="img/work-1.png" alt="f-work"></div>
                             <div class="work">
@@ -238,11 +239,11 @@
         </main>
         <footer>
             <div class="wrapper">
-                <div class="footer wow">
-                    <div class="footer-logo wow animate__fadeInLeftBig"><img src="img/miura-ico.png" alt="ico"></div>
-                    <p class="email wow animate__fadeInUpBig"><a href="mailto:support@miura.pro?subject=Помощь"
+                <div class="footer">
+                    <div class="footer-logo animation-element fadeInLeft"><img src="img/miura-ico.png" alt="ico"></div>
+                    <p class="email animation-element zoomIn"><a href="mailto:support@miura.pro?subject=Помощь"
                             target="_blank">support@miura.pro</a></p>
-                    <div class="git-ico wow animate__fadeInRightBig">
+                    <div class="git-ico animation-element fadeInRight">
                         <a href="#" class="git__inner"><img src="img/github-ico.png" alt=""></a>
                         <!-- target="_blank" -->
                     </div>
@@ -250,10 +251,10 @@
             </div>
         </footer>
     </div>
-    <script src="js/wow.min.js"></script>
-    <script src="js/howler.min.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/howler.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 

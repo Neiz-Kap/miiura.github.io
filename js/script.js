@@ -1,11 +1,50 @@
 
-// Появления блоков при прокрутке
-new WOW().init();
+//--------------------------------------------------------------
+// Плавная анимация при скролле
+$(document).ready(function () {
+
+    //window and animation items
+    var animation_elements = $.find('.animation-element');
+
+    //check to see if any animation containers are currently in view
+    function check_if_in_view() {
+        //get current window information
+        var window_top_position = $(window).scrollTop();
+        var window_bottom_position = (window_top_position + $(window).height());
+
+        //iterate through elements to see if its in view
+        $.each(animation_elements, function () {
+
+            //get the element sinformation
+            var element = $(this);
+            var element_height = $(element).outerHeight();
+            var element_top_position = $(element).offset().top;
+            var element_bottom_position = (element_top_position + element_height);
+
+            //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+            if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+                element.addClass('in-view');
+            } else {
+                element.removeClass('in-view');
+            }
+        });
+    }
+
+    //on or scroll, detect elements in view
+    $(window).on('scroll resize', function () {
+        check_if_in_view()
+    })
+    //trigger our scroll event on initial load
+    $(window).trigger('scroll');
+});
+
+//--------------------------------------------------------------
+
 
 let container = document.querySelector(".container");
 // Загрузочный экран и загрузка
 window.onload = function () {
-    
+
 
     document.body.classList.add('loaded_hiding');
     let ss = document.getElementById("pink-line"), i = 0;
@@ -22,11 +61,13 @@ window.onload = function () {
         clearInterval(timer);
     }, 1000);
     container.style.display = "block";
+
+   
 }
 
-
+//--------------------------------------------------------------
 // Медиа плеер (radio)
-var radio = function () {
+let radio = function () {
     this.index = 0;
     this.playlist = [];
 
@@ -76,7 +117,7 @@ radio.prototype = {
     }
 };
 
-
+//--------------------------------------------------------------
 // Green button
 let o = document.querySelector('.news_player_header-content');
 let t = 0;
@@ -115,26 +156,32 @@ function durationChange(value) {
     sound.seek(value);
 }
 
+
+//--------------------------------------------------------------
+let oldPageYOffset = 0;
+console.log(oldPageYOffset)
 // Эффект параллакса
 function parallax(element, distanceX, distanceY, speed) {
+    if (!document.body.classList.contains('loaded')) {
+        console.log('not loaded');
+        return;
+    }
+
     const item = document.querySelector(element);
     item.style.transform = `translate(${distanceX * speed}px, -${distanceY * speed}px)`;
 }
-
 window.addEventListener('scroll', function () {
     parallax('.header-page-1', 0, window.scrollY, 0.3);
-    parallax('.header-page-2', 0, window.scrollY, 0.3);
+    parallax('.header-page-2', 0, window.scrollY, 0.4);
     parallax('.robot-animation', window.scrollY, window.scrollY, 0.5);
     parallax('.rob-animat', 0, window.scrollY, 0.9);
     // parallax('.description', 0, window.scrollY, 0.3);
 })
-
-
-
+//--------------------------------------------------------------
 const durationRange = document.querySelector('#duration_range');
-var durationInterval;
+let durationInterval;
 
-var sound = new Howl({
+let sound = new Howl({
     src: ['https://share.dmca.gripe/Jcl2qfzkunPIxsKa.mp3', 'https://share.dmca.gripe/WljS2IFbIBlaoHwa.mp3'],
     onload: function () {
         console.log('loaded')

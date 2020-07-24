@@ -1,85 +1,126 @@
-/*
-   Animation example, for spinners
-*/
 .animate-spin {
-  -moz-animation: spin 2s infinite linear;
-  -o-animation: spin 2s infinite linear;
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
   display: inline-block;
 }
-@-moz-keyframes spin {
+
+/* Вращающийся розовый круг */
+
+.pink-round {
+  animation: turning 1s linear 2s;
+}
+
+@keyframes turning {
   0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-
   100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+    transform: rotate(360deg);
   }
 }
-@-webkit-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
 
+.fadeInUpBig {
+  -webkit-animation: fadeInUpBig;
+  animation: fadeInUpBig;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+@-webkit-keyframes rb-animate {
+  0% {
+    -webkit-transform: translate(0, -0.5em);
+    transform: translate(0, -0.5em);
+  }
+  50% {
+    -webkit-transform: translate(0, 0.5em);
+    transform: translate(0, 0.5em);
+  }
   100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+    -webkit-transform: translate(0, -0.5em);
+    transform: translate(0, -0.5em);
   }
 }
-@-o-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
 
+@keyframes rb-animate {
+  0% {
+    -webkit-transform: translate(0, -0.5em);
+    transform: translate(0, -0.5em);
+  }
+  50% {
+    -webkit-transform: translate(0, 0.5em);
+    transform: translate(0, 0.5em);
+  }
   100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+    -webkit-transform: translate(0, -0.5em);
+    transform: translate(0, -0.5em);
   }
 }
-@-ms-keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
 
-  100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+.rb-animate {
+  -webkit-animation: rb-animate 4.5s infinite cubic-bezier(0, 0, 1, 1);
+  animation: rb-animate 4.5s infinite cubic-bezier(0, 0, 1, 1);
+}
+
+/* Анимация выезжающего блока cнизу */
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 1000px, 0);
+    transform: translate3d(0, 1000px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
-@keyframes spin {
-  0% {
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
 
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 1000px, 0);
+    transform: translate3d(0, 1000px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Движущийся робот по вертикали - эффект парения */
+
+.rob-animat {
+  -webkit-animation: rb-animate 4.5s infinite cubic-bezier(0, 0, 1, 1);
+  animation: rb-animate 4.5s infinite cubic-bezier(0, 0, 1, 1);
+}
+
+/* Анимация работ */
+
+.animation-element.backInLeft.in-view {
+  animation: backInLeft 2s;
+}
+
+@keyframes backInLeft {
+  0% {
+    -webkit-transform: translateX(-2000px) scale(0.7);
+    transform: translateX(-2000px) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    -webkit-transform: translateX(0px) scale(0.7);
+    transform: translateX(0px) scale(0.7);
+    opacity: 0.7;
+  }
   100% {
-    -moz-transform: rotate(359deg);
-    -o-transform: rotate(359deg);
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
   }
 }
