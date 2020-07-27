@@ -40,9 +40,8 @@ $(document).ready(function () {
 
 //--------------------------------------------------------------
 
-
-let container = document.querySelector(".container");
 // Загрузочный экран и загрузка
+let container = document.querySelector(".container");
 window.onload = function () {
 
 
@@ -182,7 +181,7 @@ const durationRange = document.querySelector('#duration_range');
 let durationInterval;
 
 let sound = new Howl({
-    src: ['https://share.dmca.gripe/Jcl2qfzkunPIxsKa.mp3', 'https://share.dmca.gripe/WljS2IFbIBlaoHwa.mp3'],
+    // src: ['https://share.dmca.gripe/Jcl2qfzkunPIxsKa.mp3', 'https://share.dmca.gripe/WljS2IFbIBlaoHwa.mp3'],
     onload: function () {
         console.log('loaded')
         const duration = sound.duration();
