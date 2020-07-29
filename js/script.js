@@ -64,6 +64,27 @@ window.onload = function () {
    
 }
 
+// Эффект параллакса
+function parallax(element, distanceX, distanceY, speed) {
+    if (!document.body.classList.contains('loaded')) {
+        console.log('not loaded');
+        return;
+    }
+
+    const item = document.querySelector(element);
+    item.style.transform = `translate(${distanceX * speed}px, -${distanceY * speed}px)`;
+}
+window.addEventListener('scroll', function () {
+    parallax('.header-page-1', 0, window.scrollY, 0.3);
+    parallax('.header-page-2', 0, window.scrollY, 0.4);
+    parallax('.robot-animation', window.scrollY, window.scrollY, 0.5);
+    parallax('.rob-animat', 0, window.scrollY, 0.9);
+    // parallax('.description', 0, window.scrollY, 0.3);
+})
+//--------------------------------------------------------------
+
+
+
 //--------------------------------------------------------------
 // Медиа плеер (radio)
 let radio = function () {
@@ -159,24 +180,8 @@ function durationChange(value) {
 //--------------------------------------------------------------
 let oldPageYOffset = 0;
 console.log(oldPageYOffset)
-// Эффект параллакса
-function parallax(element, distanceX, distanceY, speed) {
-    if (!document.body.classList.contains('loaded')) {
-        console.log('not loaded');
-        return;
-    }
 
-    const item = document.querySelector(element);
-    item.style.transform = `translate(${distanceX * speed}px, -${distanceY * speed}px)`;
-}
-window.addEventListener('scroll', function () {
-    parallax('.header-page-1', 0, window.scrollY, 0.3);
-    parallax('.header-page-2', 0, window.scrollY, 0.4);
-    parallax('.robot-animation', window.scrollY, window.scrollY, 0.5);
-    parallax('.rob-animat', 0, window.scrollY, 0.9);
-    // parallax('.description', 0, window.scrollY, 0.3);
-})
-//--------------------------------------------------------------
+
 const durationRange = document.querySelector('#duration_range');
 let durationInterval;
 

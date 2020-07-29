@@ -71,71 +71,65 @@
 }
 
 /* ___________________________________________________ */
+
 /* Вращающийся розовый круг */
 
 .pink-round {
   -webkit-animation: turning 1s linear;
-          animation: turning 1s linear;
+  animation: turning 1s linear;
 }
-.time__inner-2 > .pink-round {
-  -webkit-animation: turning 3s linear 2s;
-          animation: turning 3s linear 2s;
+
+.time__inner-2>.pink-round {
+  -webkit-animation: turning-2 2.65s linear 2s;
+  animation: turning-2 2.65s linear 2s;
 }
 
 @-webkit-keyframes turning {
   0% {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
   }
-
-  10% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
-  }
-
-  90% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
-  }
-
   100% {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
   }
 }
 
 @keyframes turning {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-
-  10% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
-  }
-
-  90% {
-    -webkit-transform: rotate(240deg);
-            transform: rotate(240deg);
-  }
-
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-.third-rectangl,
-.pink-rectangl {
+@-webkit-keyframes turning-2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+  }
+}
+
+@keyframes turning-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+
+.third-rectangl, .pink-rectangl {
   -webkit-animation: slideLeft 1s ease-in-out;
-          animation: slideLeft 1s ease-in-out;
+  animation: slideLeft 1s ease-in-out;
 }
-.other-rect > .third-rectangl,
-.other-rect > .pink-rectangl {
+
+.other-rect>.third-rectangl, .other-rect>.pink-rectangl {
   -webkit-animation: slideLeft 5s ease-in-out;
-          animation: slideLeft 5s ease-in-out;
+  animation: slideLeft 5s ease-in-out;
 }
+
 @-webkit-keyframes slideLeft {
   0% {
     opacity: 0;
@@ -149,6 +143,7 @@
     opacity: 1;
   }
 }
+
 @keyframes slideLeft {
   0% {
     opacity: 0;
@@ -171,12 +166,12 @@
 
 .fadeInUpBig {
   -webkit-animation: fadeInUpBig 4s;
-          animation: fadeInUpBig 4s;
+  animation: fadeInUpBig 4s;
 }
 
 .animation-element .fadeInUpBig .in-view {
   -webkit-animation: fadeInUpBig 3s;
-          animation: fadeInUpBig 3s;
+  animation: fadeInUpBig 3s;
 }
 
 @-webkit-keyframes fadeInUpBig {
@@ -207,51 +202,55 @@
 
 .animation-element.fadeInUpBig.in-view {
   -webkit-animation: fadeInUpBig 3s;
-          animation: fadeInUpBig 3s;
+  animation: fadeInUpBig 3s;
 }
+
 /*-----------------------------------------------------*/
+
 /* Анимация приветствия рукой */
+
 .arm {
   max-height: 100px;
   position: absolute;
   top: 22px;
   left: -5px;
   -webkit-animation: arm 3s infinite ease;
-          animation: arm 3s infinite ease;
+  animation: arm 3s infinite ease;
   -webkit-transform-origin: right bottom;
-      -ms-transform-origin: right bottom;
-          transform-origin: right bottom;
+  -ms-transform-origin: right bottom;
+  transform-origin: right bottom;
 }
 
 @-webkit-keyframes arm {
   0% {
     -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg); 
+    transform: rotate(-25deg);
   }
   50% {
     -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
   100% {
     -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg);
+    transform: rotate(-25deg);
   }
 }
 
 @keyframes arm {
   0% {
     -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg); 
+    transform: rotate(-25deg);
   }
   50% {
     -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    transform: rotate(-10deg);
   }
   100% {
     -webkit-transform: rotate(-25deg);
-            transform: rotate(-25deg);
+    transform: rotate(-25deg);
   }
 }
+
 /* ___________________________________________________ */
 
 /* Движущийся робот по вертикали - эффект парения */
@@ -362,12 +361,12 @@
   from {
     opacity: 0;
     -webkit-transform: translate3d(-2000px, 0, 0);
-            transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
   }
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -375,12 +374,12 @@
   from {
     opacity: 0;
     -webkit-transform: translate3d(-2000px, 0, 0);
-            transform: translate3d(-2000px, 0, 0);
+    transform: translate3d(-2000px, 0, 0);
   }
   to {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -390,35 +389,35 @@
   -o-transition: all 1s linear;
   transition: all 1s linear;
   -webkit-transform: translate3d(-200px, 0px, 0px);
-          transform: translate3d(-200px, 0px, 0px);
+  transform: translate3d(-200px, 0px, 0px);
 }
 
 /*Анимация выезжающих блоков слева (header и two title on works)*/
 
 .title {
   -webkit-animation: fadeInLeftBig 2s;
-          animation: fadeInLeftBig 2s;
+  animation: fadeInLeftBig 2s;
 }
 
 .subtitle {
   -webkit-animation: fadeInLeftBig 2.2s;
-          animation: fadeInLeftBig 2.2s;
+  animation: fadeInLeftBig 2.2s;
 }
 
 .time__inner-2 {
   -webkit-animation: fadeInLeftBig 2.6s;
-          animation: fadeInLeftBig 2.6s;
+  animation: fadeInLeftBig 2.6s;
 }
 
 .header-page-2 {
   -webkit-animation: fadeInLeftBig 5s;
-          animation: fadeInLeftBig 5s;
+  animation: fadeInLeftBig 5s;
 }
 
 @media (max-width: 768px) {
   .header-page-1 {
     -webkit-animation: fadeInLeftBig 5s;
-            animation: fadeInLeftBig 5s;
+    animation: fadeInLeftBig 5s;
   }
   #stars, #stars2, #stars3 {
     display: none;
@@ -429,22 +428,28 @@
   }
   .fadeInRightBig {
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
   }
 }
 
 .animation-element.fadeInLeftBig.in-view {
   -webkit-animation: fadeInLeftBig 3s;
-          animation: fadeInLeftBig 3s;
+  animation: fadeInLeftBig 3s;
 }
-
+/* ___________________________________________________ */
+/* Выезжающий второй робот */
+.rob-out {
+  opacity: 0;
+  transition: all 1500ms linear;
+  transform: translate3d(100px, 300px, 0px);
+}
 /* ___________________________________________________ */
 
 /* Анимация работ */
 
 .animation-element.backInLeft.in-view {
   -webkit-animation: backInLeft 2s;
-          animation: backInLeft 2s;
+  animation: backInLeft 2s;
 }
 
 @-webkit-keyframes backInLeft {
@@ -493,26 +498,27 @@
   -o-transition: all 1s linear;
   transition: all 1s linear;
   -webkit-transform: translate3d(200px, 0px, 0px);
-          transform: translate3d(200px, 0px, 0px);
+  transform: translate3d(200px, 0px, 0px);
 }
 
 .animation-element.fadeInRight.in-view {
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
-          transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
 }
 
 .animation-element .fadeInRightBig .in-view {
   -webkit-animation: fadeInRightBig 3s;
-          animation: fadeInRightBig 3s;
+  animation: fadeInRightBig 3s;
 }
 
 /*  */
 
 .animation-element.zoomIn.in-view {
   -webkit-animation: zoomIn 5s;
-          animation: zoomIn 5s;
+  animation: zoomIn 5s;
 }
+
 @-webkit-keyframes zoomIn {
   from {
     opacity: 0;
@@ -523,6 +529,7 @@
     opacity: 1;
   }
 }
+
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -534,13 +541,11 @@
   }
 }
 
-
-
 /*-----------------------------------------------------*/
 
 .animation-element.in-view {
   /* Перемещение элементов в изначальное состояние */
   opacity: 1;
   -webkit-transform: translate3d(0px, 0px, 0px);
-          transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
 }

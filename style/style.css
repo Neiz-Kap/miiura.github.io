@@ -592,6 +592,9 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
@@ -818,6 +821,7 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-left: 5px;
 }
 
 .white-txt {
@@ -1050,6 +1054,7 @@ section {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    opacity: 0;
 }
 
 .work {
@@ -1096,6 +1101,7 @@ footer {
 
 .email {
     font-size: 41px;
+    opacity: 0;
     -webkit-transition: color 10s ease;
     -o-transition: color 10s ease;
     transition: color 10s ease;
