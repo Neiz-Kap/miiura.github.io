@@ -392,7 +392,8 @@
   transform: translate3d(-200px, 0px, 0px);
 }
 
-/*Анимация выезжающих блоков слева (header и two title on works)*/
+
+/*Анимация выезжающих блоков слева (header & two title on works)*/
 
 .title {
   -webkit-animation: fadeInLeftBig 2s;

@@ -949,6 +949,7 @@ section {
     background-color: #cc2666;
     border-radius: 8px;
     display: block;
+    opacity: 0;
 }
 
 .box-desc {
@@ -1038,6 +1039,7 @@ section {
 
 .big-title {
     font-size: 110px;
+    opacity: 0;
 }
 
 .our-work {
