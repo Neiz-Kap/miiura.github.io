@@ -1,7 +1,6 @@
-
 //--------------------------------------------------------------
 // Плавная анимация при скролле
-$(document).ready(function () {
+$(document).ready(function() {
 
     //window and animation items
     var animation_elements = $.find('.animation-element');
@@ -13,7 +12,7 @@ $(document).ready(function () {
         var window_bottom_position = (window_top_position + $(window).height());
 
         //iterate through elements to see if its in view
-        $.each(animation_elements, function () {
+        $.each(animation_elements, function() {
 
             //get the element sinformation
             var element = $(this);
@@ -31,10 +30,10 @@ $(document).ready(function () {
     }
 
     //on or scroll, detect elements in view
-    $(window).on('scroll resize', function () {
-        check_if_in_view()
-    })
-    //trigger our scroll event on initial load
+    $(window).on('scroll resize', function() {
+            check_if_in_view()
+        })
+        //trigger our scroll event on initial load
     $(window).trigger('scroll');
 });
 
@@ -42,17 +41,18 @@ $(document).ready(function () {
 
 // Загрузочный экран и загрузка
 let container = document.querySelector(".container");
-window.onload = function () {
+window.onload = function() {
 
 
     document.body.classList.add('loaded_hiding');
-    let ss = document.getElementById("pink-line"), i = 0;
-    let timer = setInterval(function () {
+    let ss = document.getElementById("pink-line"),
+        i = 0;
+    let timer = setInterval(function() {
         ss.style.width = `${i}%`;
         document.getElementById("LoaderPercent").innerText = `${i}%`;
         if (i < 100) i += 5;
     }, 30)
-    window.setTimeout(function () {
+    window.setTimeout(function() {
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
         document.getElementById("scroll").classList.remove("no-scroll");
@@ -61,7 +61,7 @@ window.onload = function () {
     }, 1000);
     container.style.display = "block";
 
-   
+
 }
 
 // Эффект параллакса
@@ -74,27 +74,27 @@ function parallax(element, distanceX, distanceY, speed) {
     const item = document.querySelector(element);
     item.style.transform = `translate(${distanceX * speed}px, -${distanceY * speed}px)`;
 }
-window.addEventListener('scroll', function () {
-    parallax('.header-page-1', 0, window.scrollY, 0.3);
-    parallax('.header-page-2', 0, window.scrollY, 0.4);
-    parallax('.robot-animation', window.scrollY, window.scrollY, 0.5);
-    parallax('.rob-animat', 0, window.scrollY, 0.9);
-    // parallax('.description', 0, window.scrollY, 0.3);
-})
-//--------------------------------------------------------------
+window.addEventListener('scroll', function() {
+        parallax('.header-page-1', 0, window.scrollY, 0.3);
+        parallax('.header-page-2', 0, window.scrollY, 0.4);
+        parallax('.robot-animation', window.scrollY, window.scrollY, 0.5);
+        parallax('.rob-animat', 0, window.scrollY, 0.9);
+        // parallax('.description', 0, window.scrollY, 0.3);
+    })
+    //--------------------------------------------------------------
 
 
 
 //--------------------------------------------------------------
 // Медиа плеер (radio)
-let radio = function () {
+let radio = function() {
     this.index = 0;
     this.playlist = [];
 
     for (let i = 0; i < this.playlist.length; i++) {
         this.playlist[i].howl = new Howl({
             src: [this.playlist[i].file],
-            onload: function () {
+            onload: function() {
                 console.log('loaded')
                 const duration = this.playlist[i].howl.duration();
                 durationRange.setAttribute('max', duration);
@@ -102,7 +102,7 @@ let radio = function () {
                 playIcon.classList.remove('icon-spin4');
                 playIcon.classList.add('icon-play');
             },
-            onplay: function () {
+            onplay: function() {
                 console.log('playing');
                 durationInterval = setInterval(() => {
                     if (!this.playlist[i].howl.playing()) {
@@ -115,7 +115,7 @@ let radio = function () {
                 playIcon.classList.remove('icon-play');
                 playIcon.classList.add('icon-pause');
             },
-            onpause: function () {
+            onpause: function() {
                 console.log('paused');
                 playIcon.classList.remove('icon-pause');
                 playIcon.classList.add('icon-play');
@@ -132,7 +132,7 @@ let radio = function () {
 }
 
 radio.prototype = {
-    play: function (index) {
+    play: function(index) {
         this.playlist[index].play();
     }
 };
@@ -142,14 +142,13 @@ radio.prototype = {
 let o = document.querySelector('.news_player_header-content');
 let t = 0;
 let ArrowIcon = document.querySelector('#click i');
-click.onclick = function () {
+click.onclick = function() {
     if (!t) {
         o.style.display = 'flex';
         ArrowIcon.classList.remove('icon-angle-down');
         ArrowIcon.classList.add('icon-angle-up');
         t++;
-    }
-    else {
+    } else {
         o.style.display = 'none';
         ArrowIcon.classList.remove('icon-angle-up');
         ArrowIcon.classList.add('icon-angle-down');
@@ -187,7 +186,7 @@ let durationInterval;
 
 let sound = new Howl({
     // src: ['https://share.dmca.gripe/Jcl2qfzkunPIxsKa.mp3', 'https://share.dmca.gripe/WljS2IFbIBlaoHwa.mp3'],
-    onload: function () {
+    onload: function() {
         console.log('loaded')
         const duration = sound.duration();
         durationRange.setAttribute('max', duration);
@@ -195,7 +194,7 @@ let sound = new Howl({
         playIcon.classList.remove('icon-spin4');
         playIcon.classList.add('icon-play');
     },
-    onplay: function () {
+    onplay: function() {
         console.log('playing');
         durationInterval = setInterval(() => {
             if (!sound.playing()) {
@@ -208,7 +207,7 @@ let sound = new Howl({
         playIcon.classList.remove('icon-play');
         playIcon.classList.add('icon-pause');
     },
-    onpause: function () {
+    onpause: function() {
         console.log('paused');
         playIcon.classList.remove('icon-pause');
         playIcon.classList.add('icon-play');
@@ -226,9 +225,4 @@ sound.autoUnlock = true;
 // sound.volume(0.5);
 const soundId = sound.play();
 console.log(soundId);
-console.log(sound)
-
-
-
-
-
+console.log(sound);
