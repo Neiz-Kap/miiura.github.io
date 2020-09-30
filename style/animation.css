@@ -427,13 +427,13 @@
     animation: fadeInLeftBig 2.6s;
 }
 
-.header-page-2 {
+.header-page-down {
     -webkit-animation: fadeInLeftBig 5s;
     animation: fadeInLeftBig 5s;
 }
 
 @media (max-width: 768px) {
-    .header-page-1 {
+    .header-page-top {
         -webkit-animation: fadeInLeftBig 5s;
         animation: fadeInLeftBig 5s;
     }
@@ -442,7 +442,7 @@
     #stars3 {
         display: none;
     }
-    .header-page-2 {
+    .header-page-down {
         -webkit-animation-duration: 3s;
         animation-duration: 3s;
     }

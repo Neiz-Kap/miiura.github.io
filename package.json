@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
