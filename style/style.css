@@ -856,6 +856,7 @@ section {
 /* Лента слайдов */
 .slick-track {
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -1056,12 +1057,6 @@ footer {
     /* Слайд по центру */
     .slick-slide.slick-center {
         max-height: 356px;
-    }
-
-    /* Лента слайдов */
-    .slick-track {
-        display: flex;
-        align-items: center;
     }
 
     /* Стрелка */

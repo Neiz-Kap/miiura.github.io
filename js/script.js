@@ -80,19 +80,17 @@ cancel.on("click", function () {
 });
 
 openMakisuModal.on("click", function () {
-    // setTimeout(function () {
-
-    // }, 500)
     modalWindow.removeAttr("style").show();
     slickSliderFunction();
-    console.log("Вот");
     htmlScroll.addClass("no-scroll");
-    console.log("Вот2");
     ourWork.removeAttr("style").hide();
     footer.removeAttr("style").hide();
 });
 
 function slickSliderFunction() {
+    if ($(".slider").hasClass("slick-slider")) {
+        return;
+    }
     $(".slider").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
