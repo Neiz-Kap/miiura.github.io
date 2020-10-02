@@ -35,10 +35,8 @@ body {
     height: 100%;
     color: #565656;
     background-color: #0e141c;
-    background-image: url('../img/bg-star-tile.png');
-    background-repeat: no-repeat;
+    background: url('../img/background/bg-star-tile.png') center no-repeat;
     background-size: cover;
-    background-position: center center;
 }
 
 /* Scroll */
@@ -62,8 +60,7 @@ body {
 
 /* Wrapper for adaptation */
 .container {
-    background-image: url('../img/bg-planet.jpg');
-    background-repeat: no-repeat;
+    background: url('../img/background/bg-planet.jpg') center no-repeat;
     background-size: cover;
     overflow: hidden;
     display: none;
@@ -78,166 +75,6 @@ body {
 
 .center {
     text-align: center;
-}
-
-.icon-pause:before {
-    content: "\E800";
-}
-
-.icon-cog:before {
-    content: "\E801";
-}
-
-.icon-logout:before {
-    content: "\E802";
-}
-
-.icon-exit:before {
-    content: "\E803";
-}
-
-.icon-info:before {
-    content: "\E804";
-}
-
-.icon-home:before {
-    content: "\E805";
-}
-
-.icon-bank:before {
-    content: "\E806";
-}
-
-.icon-withdraw:before {
-    content: "\E807";
-}
-
-.icon-growth:before {
-    content: "\E808";
-}
-
-.icon-roundabout:before {
-    content: "\E809";
-}
-
-.icon-user:before {
-    content: "\E80A";
-}
-
-.icon-chat:before {
-    content: "\E80B";
-}
-
-.icon-support:before {
-    content: "\E80C";
-}
-
-.icon-news:before {
-    content: "\E80D";
-}
-
-.icon-down:before {
-    content: "\E80E";
-}
-
-.icon-left:before {
-    content: "\E80F";
-}
-
-.icon-right:before {
-    content: "\E810";
-}
-
-.icon-up:before {
-    content: "\E811";
-}
-
-.icon-paper-plane:before {
-    content: "\E812";
-}
-
-.icon-viber:before {
-    content: "\E813";
-}
-
-.icon-whatsapp:before {
-    content: "\E814";
-}
-
-.icon-right-big:before {
-    content: "\E815";
-}
-
-.icon-lock:before {
-    content: "\E816";
-}
-
-.icon-calendar:before {
-    content: "\E817";
-}
-
-.icon-calendar-alt:before {
-    content: "\E818";
-}
-
-.icon-ok:before {
-    content: "\E819";
-}
-
-.icon-watch:before {
-    content: "\E81A";
-}
-
-.icon-play:before {
-    content: "\E81B";
-}
-
-.icon-pause-1:before {
-    content: "\E81C";
-}
-
-.icon-to-end:before {
-    content: "\E81D";
-}
-
-.icon-to-start:before {
-    content: "\E81E";
-}
-
-.icon-volume-up:before {
-    content: "\E81F";
-}
-
-.icon-volume:before {
-    content: "\E820";
-}
-
-.icon-volume-off:before {
-    content: "\E821";
-}
-
-.icon-spin4:before {
-    content: "\E834";
-}
-
-.icon-list:before {
-    content: "\F009";
-}
-
-.icon-mail-alt:before {
-    content: "\F0E0";
-}
-
-.icon-moon:before {
-    content: "\F186";
-}
-
-.icon-plus:before {
-    content: "\F196";
-}
-
-.icon-mail-open:before {
-    content: "\F2B6";
 }
 
 /* loading */
@@ -339,7 +176,7 @@ body {
 
 .medium-rect,
 .little-rect {
-    background-color: #fff;
+    background-color: #FFFFFF;
     border-radius: 6px;
 }
 
@@ -411,7 +248,7 @@ body {
 .load-line {
     width: 260px;
     height: 27px;
-    background-color: #fff;
+    background-color: #FFFFFF;
 }
 
 .pink-line {
@@ -774,7 +611,8 @@ section {
     min-height: 100vh;
     padding: 30px 20px 0;
     background-color: rgba(0, 0, 0, 0.3);
-    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000, endColorstr=#7F000000);IE6–IE8 */
+    /* filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000, endColorstr=#7F000000);
+    IE6–IE8  */
     position: fixed;
     top: 0;
     bottom: 0;
@@ -791,13 +629,14 @@ section {
     padding: 20px 26px;
 }
 
-.modal-title, .modal-title-description {
+.modal-title,
+.modal-title-description {
     font-size: 60px;
     line-height: 60px;
     text-align: center;
 }
 
-.modal-title{
+.modal-title {
     position: relative;
 }
 
@@ -882,14 +721,14 @@ section {
 }
 
 /* Конечная стрелка */
-.slick-arrow.slick-disabled{
+.slick-arrow.slick-disabled {
     cursor: default;
     opacity: .2;
 }
 
 
 /* Navigation */
-.modal-title-description{
+.modal-title-description {
     font-size: 60px;
 }
 
@@ -938,6 +777,98 @@ section {
     opacity: 0;
 }
 
+
+
+/*  */
+.works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.works__item {
+    margin: 5px;
+    flex: 1 0 250px;
+    position: relative;
+}
+
+.works-card-transparent {
+    opacity: 0;
+}
+
+.works__item:hover .works-front {
+    transform: rotateY(180deg);
+}
+
+.works__item:hover .works-back {
+    transform: rotateY(360deg);
+}
+
+.works-front,
+.works-back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: .8s ease-in-out;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.works-card-transparent,
+.works-front>img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.works-back {
+    transform: rotateY(180deg);
+    background-color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    color: #000;
+
+    /* Для центрирования слова */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  */
+.works-back-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.works-back-btn {
+    margin-top: 20px;
+    padding: 14px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #f7f7f7;
+    background-color: #59a453;
+    border-radius: 5px;
+}
+
+/* В каких пределах последний блок сильно растягивается */
+@media(max-width: 1136px) and (min-width: 835px) {
+    .works__item {
+        flex-basis: 356px;
+    }
+}
+
+/*  */
+/* 
 .work {
     margin: 5px;
     border: 6px solid #fff;
@@ -956,7 +887,7 @@ section {
 .work>img {
     width: 100%;
     height: 100%;
-}
+} */
 
 footer {
     border-top: 1px solid #474a53;
@@ -988,7 +919,7 @@ footer {
     display: flex;
 }
 
-.email a:hover {
+.email a:hover, .footer__number a:hover {
     -webkit-transition: color 0.5s ease-in-out;
     -o-transition: color 0.5s ease-in-out;
     transition: color 0.5s ease-in-out;
@@ -1003,7 +934,7 @@ footer {
     display: flex;
 }
 
-.footer__number P:first-child {
+.footer__number p:first-child {
     margin-right: 25px;
 }
 
@@ -1319,7 +1250,7 @@ footer {
 
 @media (max-width: 768px) {
     body {
-        background-image: url(../img/bg-ipad.png);
+        background-image: url(../img/background/bg-ipad.png);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -1579,10 +1510,6 @@ footer {
         line-height: 20px;
     }
 
-    .works {
-        grid-template-columns: repeat(auto-fit, minmax(270px, 330px));
-    }
-
     .email {
         font-size: 34px;
     }
@@ -1784,10 +1711,6 @@ footer {
     .modal-nav li {
         font-size: 17px;
         line-height: 17px;
-    }
-
-    .works {
-        grid-template-columns: repeat(auto-fit, minmax(270px, 330px));
     }
 
     .footer {

@@ -10,7 +10,6 @@ background: transparent;
 
 article, aside, figure, footer, header, nav, section, details, summary {display: block;}
 
-
 html {
 box-sizing: border-box;
 }
@@ -21,16 +20,11 @@ box-sizing: border-box;
 box-sizing: inherit;
 }
 
-
 img,
 object,
 embed {max-width: 100%;}
 
-
-
-
 html {overflow-y: scroll;}
-
 
 ul {list-style: none;}
 
@@ -78,11 +72,9 @@ strong {font-weight: bold;}
 
 td, td img {vertical-align: top;}
 
-
 sub, sup {font-size: 75%; line-height: 0; position: relative;}
 sup {top: -0.5em;}
 sub {bottom: -0.25em;}
-
 
 pre, code, kbd, samp {font-family: monospace, sans-serif;}
 
@@ -93,16 +85,12 @@ input[type=submit],
 input[type=file],
 button {cursor: pointer; border: none; outline: none;}
 
-
 button, input, select, textarea {margin: 0;}
-
 
 button,
 input[type=button] {width: auto; overflow: visible;}
 
-
 .ie7 img {-ms-interpolation-mode: bicubic;}
-
 
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
