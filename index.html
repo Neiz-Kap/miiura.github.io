@@ -59,7 +59,7 @@
                     </div>
                 </div>
             </div>
-            <p class="loading">loading <span id="LoaderPercent"></span></p>
+            <p class="loading">loading <span id="loaderPercent"></span></p>
             <div class="loader">
                 <div class="load-info">
                     <p class="load-data">загрузка данных</p>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="load-logo">
-                    <img src="img/logotip-1.png" alt="">
+                    <img src="img/logotip.svg" alt="">
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@
                             </div>
                         </div>
                         <div class="header-page-down">
-                            <img src="img/logotip-1.png" alt="Logo" class="logo">
+                            <img src="img/logotip.svg" alt="Logo" class="logo">
                             <div class="page-txt">
                                 <div class="block-page">
                                     <div class="white-txt">
@@ -228,6 +228,20 @@
                                     target="_blank">makisu.net</a></p>
                         </div>
                     </div>
+                    <!-- <div class="modal-window" id="testir">
+                        <div class="modal-wrapper">
+                            <h2 class="modal-title">
+                                <img src="img/modal_window/cancel.svg" alt="Cancel" id="cancelir">
+                            </h2>
+                            <div class="slider">
+                                <div class="slider__item">
+                                    <img src="img/modal_window/instgram/banner.jpg" alt="slider_screenshots">
+                                </div>
+                                <div class="slider__item">
+                                    <img src="img/modal_window/instgram/i-1.jpg" alt="slider_screenshots">
+                                </div>
+                            </div>
+                        </div> -->
                     <div class="our-work">
                         <h2 class="big-title animation-element fadeInLeftBig">наша работа</h2>
                         <h2 class="pink__title animation-element fadeInLeftBig">наши последние проекты</h2>
@@ -246,7 +260,10 @@
                                 <img src="img/projects/transparent-card.jpg" alt="transparent-img"
                                     class="works-card-transparent">
                                 <div class="works-front"><img src="img/projects/work-2.jpg" alt="work-img"></div>
-                                <div class="works-back">BACK</div>
+                                <div class="works-back">
+                                    <!-- <h5 class="works-back-title">Раскрутка в Instgram</h5>
+                                            <a href="#testit" class="works-back-btn" id="openInstgramModal">Подробнее</a> -->
+                                </div>
                             </li>
                             <li class="works__item">
                                 <img src="img/projects/transparent-card.jpg" alt="transparent-img"
@@ -261,6 +278,83 @@
                                 <div class="works-back">BACK</div>
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section-reviews">
+                <div class="wrapper">
+                    <h2 class="big-title animation-element fadeInLeftBig">отзывы</h2>
+                    <h2 class="pink__title animation-element fadeInLeftBig">наших клиентов</h2>
+                    <!-- .reviews-slider>(.reviews-slider__item>img.reviews-img[src="img/reviews"]+p.reviews-customer{lorem*3}+p.reviews-text{lorem*30})*3 -->
+                    <div class="sliders slick-slider animation-element fadeInLeftBig">
+                        <div class="reviews-slider " style="margin-top: 40px; ">
+                            <!-- <button class="slick-prev slick-arrow" aria-label="Previous" type="button" style="max-width: 100px; left: 15px;">Previous</button> -->
+
+                            <div class="reviews-slider__item" style="width: 300px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img" style="margin-right: 15px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img">
+                                <p class="reviews-customer">Lorem, ipsum dolor.</p>
+                                <p class="reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Repellendus, totam praesentium aliquam quisquam aspernatur saepe placeat expedita
+                                    nobis
+                                    quaerat optio maxime a animi fuga! Similique officiis aliquam consequatur saepe
+                                    vitae.
+                                </p>
+                            </div>
+                            <div class="reviews-slider__item" style="width: 300px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img" style="margin-right: 15px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img">
+                                <p class="reviews-customer">Lorem, ipsum dolor.</p>
+                                <p class="reviews-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+                                    consectetur impedit voluptatum adipisci debitis, error perspiciatis quaerat, beatae
+                                    aliquid facere maxime accusantium voluptatibus molestiae, nisi assumenda mollitia
+                                    iste
+                                    nemo eaque?</p>
+                            </div>
+                            <div class="reviews-slider__item" style="width: 300px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img" style="margin-right: 15px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img">
+                                <p class="reviews-customer">Lorem, ipsum dolor.</p>
+                                <p class="reviews-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+                                    consectetur impedit voluptatum adipisci debitis, error perspiciatis quaerat, beatae
+                                    aliquid facere maxime accusantium voluptatibus molestiae, nisi assumenda mollitia
+                                    iste
+                                    nemo eaque?</p>
+                            </div>
+                            <div class="reviews-slider__item" style="width: 300px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img" style="margin-right: 15px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img">
+                                <p class="reviews-customer">Lorem, ipsum dolor.</p>
+                                <p class="reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Repellendus, totam praesentium aliquam quisquam aspernatur saepe placeat expedita
+                                    nobis
+                                    quaerat optio maxime a animi fuga! Similique officiis aliquam consequatur saepe
+                                    vitae.
+                                </p>
+                            </div>
+                            <div class="reviews-slider__item" style="width: 300px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img" style="margin-right: 15px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img">
+                                <p class="reviews-customer">Lorem, ipsum dolor.</p>
+                                <p class="reviews-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+                                    consectetur impedit voluptatum adipisci debitis, error perspiciatis quaerat, beatae
+                                    aliquid facere maxime accusantium voluptatibus molestiae, nisi assumenda mollitia
+                                    iste
+                                    nemo eaque?</p>
+                            </div>
+                            <div class="reviews-slider__item" style="width: 300px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img" style="margin-right: 15px;">
+                                <img src="img/favicon.png" alt="" class="reviews-img">
+                                <p class="reviews-customer">Lorem, ipsum dolor.</p>
+                                <p class="reviews-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+                                    consectetur impedit voluptatum adipisci debitis, error perspiciatis quaerat, beatae
+                                    aliquid facere maxime accusantium voluptatibus molestiae, nisi assumenda mollitia
+                                    iste
+                                    nemo eaque?</p>
+                            </div>
+                        </div>
+                        <!-- <button class="slick-next slick-arrow" aria-label="Next" type="button" style="max-width: 100px; right: 15px;">Next</button> -->
+
                     </div>
                 </div>
             </section>
