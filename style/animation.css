@@ -267,13 +267,12 @@
 
 /* Движущийся робот по вертикали - эффект парения */
 
-.rob-animat,
-.rb-animate {
-    -webkit-animation: rb-animate 4.5s infinite cubic-bezier(0, 0, 1, 1);
-    animation: rb-animate 4.5s infinite cubic-bezier(0, 0, 1, 1);
+.vertical-animation {
+    -webkit-animation: vertical-animation 4.5s infinite cubic-bezier(0, 0, 1, 1);
+    animation: vertical-animation 4.5s infinite cubic-bezier(0, 0, 1, 1);
 }
 
-@-webkit-keyframes rb-animate {
+@-webkit-keyframes vertical-animation {
     0% {
         -webkit-transform: translate(0, -0.5em);
         transform: translate(0, -0.5em);
@@ -288,7 +287,7 @@
     }
 }
 
-@keyframes rb-animate {
+@keyframes vertical-animation {
     0% {
         -webkit-transform: translate(0, -0.5em);
         transform: translate(0, -0.5em);
@@ -464,9 +463,9 @@
 /* Выезжающий второй робот */
 
 .rob-out {
-    opacity: 0;
+    /* opacity: 0;
     transition: all 1500ms linear;
-    transform: translate3d(100px, 300px, 0px);
+    transform: translate3d(100px, 300px, 0px); */
 }
 
 
