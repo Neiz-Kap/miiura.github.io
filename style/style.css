@@ -90,7 +90,7 @@ body {
 .time__inner-2,
 .boosters,
 .section-description,
-.box-desc,
+.description-block,
 .modal-nav,
 .works,
 .footer {
@@ -429,7 +429,7 @@ header {
     display: table;
 }
 
-.robot {
+.robot-body {
     max-width: 190px;
     position: relative;
 }
@@ -499,31 +499,31 @@ section {
     -khtml-opacity: 0;
 }
 
-.box-desc {
+.description-block {
     margin-top: 23px;
 }
 
-.desc {
+.description__item {
     max-width: 325px;
 }
 
-.desc__title {
+.description__title {
     font-size: 60px;
-    line-height: 0.6;
+    line-height: 0.8;
 }
 
-.desc__title span {
+.description__title span {
     color: #cc2666;
 }
 
-.desc-txt {
+.description-txt {
     font-family: "Aire Exterior", sans-serif;
     font-size: 24px;
     text-transform: none;
 }
 
-.first-par {
-    margin-bottom: 21px;
+.mb-20 {
+    margin-bottom: 20px;
 }
 
 
@@ -652,7 +652,7 @@ section {
 
 .slider, .reviews-slider {
     max-width: 1370px;
-    margin: 25px auto;
+    margin: 40px auto 25px;
     padding: 0 40px;
     position: relative;
 }
@@ -1210,16 +1210,12 @@ footer {
         font-size: 45px;
     }
 
-    .desc {
+    .description__item {
         max-width: 270px;
     }
 
-    .desc:first-child {
+    .description__item:first-child {
         margin-right: 30px;
-    }
-
-    .first-par {
-        min-width: 260px;
     }
 
     .robot-two {
@@ -1246,7 +1242,7 @@ footer {
         max-width: 360px;
     }
 
-    .robot {
+    .robot-body {
         margin: 0;
         max-width: 160px;
     }
@@ -1278,14 +1274,14 @@ footer {
         font-size: 31px;
     }
 
-    .box-desc {
+    .description-block {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
     }
 
-    .desc:first-child {
+    .description__item:first-child {
         margin-bottom: 30px;
     }
 
@@ -1412,23 +1408,23 @@ footer {
         margin: 0 auto;
     }
 
-    .desc {
+    .description__item {
         max-width: 286px;
     }
 
-    .desc:nth-child(2) {
+    .description__item:nth-child(2) {
         max-width: 246px;
     }
 
-    .desc-txt {
+    .description-txt {
         font-size: 21px;
     }
 
-    .desc-txt:first-child {
+    .description-txt:first-child {
         line-height: 1.18;
     }
 
-    .box-desc {
+    .description-block {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1521,7 +1517,7 @@ footer {
         font-size: 40px;
     }
 
-    .box-desc {
+    .description-block {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1531,11 +1527,11 @@ footer {
         align-items: center;
     }
 
-    .desc:first-child {
-        margin-right: 0;
+    .description__item:first-child {
+        margin: 0;
     }
 
-    .desc:nth-child(2) {
+    .description__item:nth-child(2) {
         margin-top: 36px;
         max-width: 286px;
     }
