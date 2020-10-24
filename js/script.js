@@ -18,7 +18,7 @@ $(document).ready(function () {
 
             //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
             if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
-                console.log(element_bottom_position, window_top_position)
+                // console.log(element_bottom_position, window_top_position)
                 element.addClass('in-view');
             } else {
                 // element.removeClass('in-view');
@@ -37,15 +37,18 @@ $(document).ready(function () {
 
 // Загрузочный экран и загрузка
 let container = document.querySelector(".container");
+
 window.onload = function () {
     document.body.classList.add('loaded_hiding');
     let ss = document.getElementById("pink-line"),
         i = 0;
+
     let timer = setInterval(function () {
         ss.style.width = `${i}%`;
         document.getElementById("loaderPercent").innerText = `${i}%`;
         if (i < 100) i += 5;
     }, 30)
+
     window.setTimeout(function () {
         document.body.classList.add('loaded');
         document.body.classList.remove('loaded_hiding');
@@ -59,23 +62,43 @@ window.onload = function () {
 //--------------------------------------------------------------
 
 // slickSliderFunction();
+let counter_makisu = 0;
+let counter_instagramm = 0;
+let counter_brand = 0;
 
-const cancel = $("#cancel");
 const openMakisuModal = $("#openMakisuModal");
-const modalWindow = $(".modal-window");
-const descriptionSection = $(".section-1");
+const openInstgrammModal = $("#openInstgrammModal");
+const openBrandModal = $("#openBrandModal");
+
+const MakisuModal = $("#MakisuModal");
+const InstagrammModal = $("#InstagrammModal");
+const BrandMakisuModal = $("#BrandMakisuModal");
+
+const htmlScroll = $("#scroll");
+const cancel = $(".cancel");
+
+const descriptionSection = $(".section-description");
 const ourWork = $(".our-work");
 const sectionReviews = $(".section-reviews");
-const htmlScroll = $("#scroll");
 const footer = $("footer");
-// const cancelir = $("#cancelir");
-// const openMakisuModal = $("#openInstgramModal");
 
 
 
 // Open/close modal window
+// close
 cancel.on("click", function () {
-    modalWindow.removeAttr("style").hide();
+    if (counter_makisu == 1) {
+        MakisuModal.removeAttr("style").hide();
+        counter_makisu--;
+    } else if (counter_instagramm == 1) {
+        InstagrammModal.removeAttr("style").hide();
+        counter_instagramm--;
+    }
+    else if(counter_brand == 1){
+        BrandMakisuModal.removeAttr("style").hide();
+        counter_brand--;
+    }
+
     htmlScroll.removeClass("no-scroll");
     descriptionSection.removeAttr("style").show();
     ourWork.removeAttr("style").show();
@@ -83,16 +106,39 @@ cancel.on("click", function () {
     footer.removeAttr("style").show();
 });
 
+// open modal window
+// open Makisu site modal
 openMakisuModal.on("click", function () {
-    modalWindow.removeAttr("style").show();
+    MakisuModal.removeAttr("style").show();
+    counter_makisu++;
     slickSliderFunction();
+    HideElementOnCancelModalWindow();
+});
+
+openInstgrammModal.on("click", function () {
+    InstagrammModal.removeAttr("style").show();
+    counter_instagramm++;
+    slickSliderFunction();
+    HideElementOnCancelModalWindow();
+});
+
+openBrandModal.on("click", function(){
+    BrandMakisuModal.removeAttr("style").show();
+    counter_brand++;
+    slickSliderFunction();
+    HideElementOnCancelModalWindow();
+});
+
+// general code for open modal window
+function HideElementOnCancelModalWindow() {
     htmlScroll.addClass("no-scroll");
     descriptionSection.removeAttr("style").hide();
     ourWork.removeAttr("style").hide();
     sectionReviews.removeAttr("style").hide();
     footer.removeAttr("style").hide();
-});
+}
 
+// slider function
 function slickSliderFunction() {
     if ($(".slider").hasClass("slick-slider")) {
         return;
@@ -158,8 +204,7 @@ function slickSliderFunction() {
 //     });
 // }
 
-// ///////////// 
-$(document).ready(function () {
+slickSliderReviewsFunction = () => {
     $('.reviews-slider').slick({
         adaptiveHeight: true,
         slidesToShow: 3,
@@ -177,4 +222,6 @@ $(document).ready(function () {
             }
         }]
     });
-});
+}
+
+slickSliderReviewsFunction();

@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/animation.css">
-    <link rel="stylesheet" href="style/fontello.css">
     <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <title>Miura.pro</title>
@@ -119,7 +118,7 @@
                                 в&nbsp;ориентировании.</p>
                             <div class="robot-block">
                                 <div class="robot-body">
-                                    <img class="arm" src="img/robots/hand.png" alt="robot-hand">
+                                    <img class="robot-arm" src="img/robots/hand.png" alt="robot-hand">
                                     <img src="img/robots/robot.png" alt="robot">
                                 </div>
                                 <div class="boosters-block">
@@ -184,10 +183,12 @@
             </section>
             <section class="section-wrapper">
                 <div class="wrapper">
-                    <div class="modal-window" id="test">
+                    <div class="modal-window" id="MakisuModal">
                         <div class="modal-wrapper">
                             <h2 class="modal-title">makisu
-                                <img src="img/modal_window/cancel.svg" alt="Cancel" id="cancel">
+                                <button class="cancel">
+                                    <img src="img/modal_window/cancel.svg" alt="Cancel">
+                                </button>
                             </h2>
                             <div class="slider">
                                 <div class="slider__item">
@@ -211,28 +212,58 @@
                                     <li>кроссбраузерность под популярные браузеры;</li>
                                     <li>Оптимизация и&nbsp;ранжирование;</li>
                                 </ul>
-                                <!-- <ul>
-                                    li*
-                                </ul> -->
                             </nav>
-                            <p class="modal-link">ссылка на сайт: <a href="https://makisu.net/"
-                                    target="_blank">makisu.net</a></p>
+                            <p class="modal-link">ссылка на сайт:
+                                <a href="https://makisu.net/" target="_blank">makisu.net</a>
+                            </p>
                         </div>
                     </div>
-                    <!-- <div class="modal-window" id="testir">
+                    <div class="modal-window" id="InstagrammModal">
                         <div class="modal-wrapper">
-                            <h2 class="modal-title">
-                                <img src="img/modal_window/cancel.svg" alt="Cancel" id="cancelir">
+                            <h2 class="modal-title">Раскрутка Instagramm
+                                <button class="cancel">
+                                    <img src="img/modal_window/cancel.svg" alt="Cancel">
+                                </button>
+                            </h2>
+                            <img src="img/modal_window/promotion.jpg" class="modal-promotion-img"
+                                alt="promotion instagramm">
+                            <p class="modal-link">ссылка на сайт:
+                                <a href="https://makisu.net/" target="_blank">makisu.net</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-window" id="BrandMakisuModal">
+                        <div class="modal-wrapper">
+                            <h2 class="modal-title modal-title--size">Брэндироанная продукция&nbsp;Makisu
+                                <button class="cancel cancel--title-brand">
+                                    <img src="img/modal_window/cancel.svg" alt="Cancel">
+                                </button>
                             </h2>
                             <div class="slider">
-                                <div class="slider__item">
-                                    <img src="img/modal_window/instgram/banner.jpg" alt="slider_screenshots">
-                                </div>
-                                <div class="slider__item">
-                                    <img src="img/modal_window/instgram/i-1.jpg" alt="slider_screenshots">
-                                </div>
+                                <div class="slider__item"><img src="img/modal_window/brandbook/1.jpg"
+                                        alt="brand makisu img"></div>
+                                <div class="slider__item"><img src="img/modal_window/brandbook/2.jpg"
+                                        alt="brand makisu img"></div>
+                                <div class="slider__item"><img src="img/modal_window/brandbook/3.jpg"
+                                        alt="brand makisu img"></div>
+                                <div class="slider__item"><img src="img/modal_window/brandbook/4.jpg"
+                                        alt="brand makisu img"></div>
+                                <div class="slider__item"><img src="img/modal_window/brandbook/5.jpg"
+                                        alt="brand makisu img"></div>
+                                <div class="slider__item"><img src="img/modal_window/brandbook/6.jpg"
+                                        alt="brand makisu img"></div>
+                                <div class="slider__item"><img src="img/modal_window/brandbook/7.jpg"
+                                        alt="brand makisu img"></div>
+                                <div class="slider__item"><img src="img/modal_window/brandbook/8.jpg"
+                                        alt="brand makisu img"></div>
+                                <div class="slider__item"><img src="img/modal_window/brandbook/9.jpg"
+                                        alt="brand makisu img"></div>
                             </div>
-                        </div> -->
+                            <p class="modal-link">ссылка на сайт:
+                                <a href="https://makisu.net/" target="_blank">makisu.net</a>
+                            </p>
+                        </div>
+                    </div>
                     <div class="our-work">
                         <h2 class="big-title animation-element fadeInLeftBig">наша работа</h2>
                         <h2 class="pink-title animation-element fadeInLeftBig">наши последние проекты</h2>
@@ -243,8 +274,8 @@
                                     class="works-card-transparent">
                                 <div class="works-front"><img src="img/projects/work-1.jpg" alt="work-img"></div>
                                 <div class="works-back">
-                                    <h5 class="works-back-title">Дизайн и вёрстка с нуля, оптимизация</h5>
-                                    <a href="#test" class="works-back-btn" id="openMakisuModal">Подробнее</a>
+                                    <h5 class="works-back-title">Дизайн и&nbsp;вёрстка с&nbsp;нуля, оптимизация</h5>
+                                    <button class="works-back-btn" id="openMakisuModal">Подробнее</button>
                                 </div>
                             </li>
                             <li class="works__item">
@@ -252,26 +283,73 @@
                                     class="works-card-transparent">
                                 <div class="works-front"><img src="img/projects/work-2.jpg" alt="work-img"></div>
                                 <div class="works-back">
-                                    <h5 class="works-back-title">Раскрутка в Instagram</h5>
-                                    <!-- <a href="#testit" class="works-back-btn" id="openInstgramModal">Подробнее</a> -->
+                                    <h5 class="works-back-title">Раскрутка в&nbsp;Instagram</h5>
+                                    <button class="works-back-btn" id="openInstgrammModal">Подробнее</button>
                                 </div>
                             </li>
                             <li class="works__item">
                                 <img src="img/projects/transparent-card.jpg" alt="transparent-img"
                                     class="works-card-transparent">
                                 <div class="works-front"><img src="img/projects/work-3.jpg" alt="work-img"></div>
-                                <div class="works-back">В разработке</div>
+                                <div class="works-back">
+                                    <h5 class="works-back-title">Брэндироанная продукция Makisu</h5>
+                                    <button class="works-back-btn" id="openBrandModal">Подробнее</button>
+                                </div>
                             </li>
                             <li class="works__item">
                                 <img src="img/projects/transparent-card.jpg" alt="transparent-img"
                                     class="works-card-transparent">
-                                <div class="works-front"><img src="img/projects/work-4.jpg" alt="work-img"></div>
-                                <div class="works-back">В разработке</div>
+                                <div class="works-front"><img src="img/modal_window/brandbook/2.jpg" alt="work-img">
+                                </div>
+                                <div class="works-back">
+                                    <h5 class="works-back-title">Пример брэндированной продукции</h5>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
             </section>
+            <!-- <section class="section-reviews">
+                <div class="wrapper">
+                    <h2 class="big-title animation-element fadeInLeftBig">отзывы</h2>
+                    <h2 class="pink-title animation-element fadeInLeftBig">наших клиентов</h2>
+                    <div class="reviews-slider animation-element fadeInLeftBig">
+                        <div class="reviews-slider__item">
+                            <img src="img/modal_window/cancel.svg" alt="" class="reviews-img">
+                            <p class="reviews-customer">В разработке</p>
+                            <p class="reviews-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Repellendus, totam praesentium aliquam quisquam aspernatur saepe placeat expedita
+                                nobis quaerat optio maxime a animi fuga! Similique officiis aliquam consequatur
+                                saepe vitae.
+                            </p>
+                        </div>
+                        <div class="reviews-slider__item">
+                            <img src="img/modal_window/cancel.svg" alt="" class="reviews-img">
+                            <p class="reviews-customer">В разработке</p>
+                            <p class="reviews-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+                                consectetur impedit voluptatum adipisci debitis, error perspiciatis quaerat, beatae
+                                aliquid facere maxime accusantium voluptatibus molestiae, nisi assumenda
+                                mollitia iste nemo eaque?</p>
+                        </div>
+                        <div class="reviews-slider__item">
+                            <img src="img/modal_window/cancel.svg" alt="" class="reviews-img">
+                            <p class="reviews-customer">В разработке</p>
+                            <p class="reviews-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+                                consectetur impedit voluptatum adipisci debitis, error perspiciatis quaerat, beatae
+                                aliquid facere maxime accusantium voluptatibus molestiae, nisi assumenda
+                                mollitia iste nemo eaque?</p>
+                        </div>
+                        <div class="reviews-slider__item">
+                            <img src="img/modal_window/cancel.svg" alt="" class="reviews-img">
+                            <p class="reviews-customer">В разработке</p>
+                            <p class="reviews-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi
+                                consectetur impedit voluptatum adipisci debitis, error perspiciatis quaerat, beatae
+                                aliquid facere maxime accusantium voluptatibus molestiae, nisi assumenda
+                                mollitia iste nemo eaque?</p>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
         </main>
         <footer>
             <div class="wrapper">
